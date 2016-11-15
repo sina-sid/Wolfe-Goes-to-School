@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\testScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Question3Selector.cs">
     <Files>
-      <File FileName="Assets\testScript.cs" Line="19" Column="3" />
+      <File FileName="Assets\Scripts\dialogueScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\question1Selector.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\Question2Selector.cs" Line="13" Column="22" />
+      <File FileName="Assets\Scripts\Question3Selector.cs" Line="6" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
