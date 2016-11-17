@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour {
 
 	Text timer;
-	public float maxTime = 20;
+	public float maxTime = 60;
 
 	// Use this for initialization
 	void Start () {
@@ -26,8 +26,11 @@ public class TimerScript : MonoBehaviour {
 
 		if (curTime <= 0) {
 			timer.text = "00:00";
-		} else {	
-			timer.text = curTime.ToString ();
+		} else {
+			int minutes = Mathf.FloorToInt(curTime / 60F);
+			int seconds = Mathf.FloorToInt(curTime - minutes * 60);
+			string niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);	
+			timer.text = niceTime;
 			// when answer chosen: highlight most voted answer, change scene
 		}
 	}
