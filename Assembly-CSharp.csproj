@@ -73,13 +73,13 @@
      <Compile Include="Assets\Narrate\Scripts\Triggers\OnEnableNarrationTrigger.cs" />
      <Compile Include="Assets\Narrate\Scripts\Triggers\ProximityNarrationTrigger.cs" />
      <Compile Include="Assets\Narrate\Scripts\Triggers\TimerNarrationTrigger.cs" />
-     <Compile Include="Assets\Scripts\Question1Selector.cs" />
-     <Compile Include="Assets\Scripts\Question2Selector.cs" />
-     <Compile Include="Assets\Scripts\Question3Selector.cs" />
+     <Compile Include="Assets\Scripts\Game Logic and Variables\AudienceStreamerVariables.cs" />
+     <Compile Include="Assets\Scripts\Game Logic and Variables\GameLogicTree.cs" />
+     <Compile Include="Assets\Scripts\Game Logic and Variables\dialogueScript.cs" />
      <Compile Include="Assets\Scripts\ScrollText.cs" />
+     <Compile Include="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" />
      <Compile Include="Assets\Scripts\TimerScript.cs" />
      <Compile Include="Assets\Scripts\UITextTypewriter.cs" />
-     <Compile Include="Assets\Scripts\dialogueScript.cs" />
      <Compile Include="Assets\Scripts\testScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
