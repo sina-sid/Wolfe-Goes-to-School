@@ -35,7 +35,11 @@ public class GameLogicTree : MonoBehaviour {
 	// Use this for initialization
 	//THIS FUNCTION IS CALLED ONCE PER GAME TO SET STARTING VALUES AND CREATE ALL INSTANCES OF POSSIBLE DIALOGUE
 	void Start () {
-		characters = GetComponent<Characters>(); //theres a bug here
+		characters = GetComponent<Characters>();
+		characters.Start ();
+		Debug.Log (characters.Greg.response);
+		//Debug.Log (characters.Greg.isAlive.ToString ());
+		characters.resetCharactersForNextRound();
 		resetValuesForNextRound ();
 
 		//Streamer.isAlive = true;

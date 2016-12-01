@@ -12,15 +12,21 @@ public struct character {
 
 public class Characters : MonoBehaviour {
 
-	character Greg = new character ();
-	character Bruno = new character ();
-	character Alix = new character ();
-	character Olivia = new character ();
-	character Duke = new character ();
+	public character Greg;
+	public character Bruno;
+	public character Alix;
+	public character Olivia;
+	public character Duke;
 
 	// Use this for initialization
 	public void Start () {
+		Greg = new character ();
+		Bruno = new character ();
+		Alix = new character ();
+		Olivia = new character ();
+		Duke = new character ();
 
+		Debug.Log ("Ran.");
 		Greg.isAlive = true;
 		Bruno.isAlive = true;
 		Alix.isAlive = true;

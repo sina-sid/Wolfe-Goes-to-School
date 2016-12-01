@@ -81,7 +81,7 @@
      <Compile Include="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" />
      <Compile Include="Assets\Scripts\TimerScript.cs" />
      <Compile Include="Assets\Scripts\UITextTypewriter.cs" />
-     <Compile Include="Assets\Scripts\testScript.cs" />
+     <Compile Include="Assets\Scripts\testTransitionScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
