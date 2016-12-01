@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 //TODO: ADD STREAMER FUNCTIONALITY
 
@@ -15,83 +15,60 @@ public struct AudienceSelection {
 	public string whoToKill;
 }
 
+
 public class GameLogicTree : MonoBehaviour {
 
+	public Characters characters;
+
+	//Round variables
 	public int roundNumber;
+
+	//Response Types (pre-defined)
+	public List<string> responseTypes = new List<string>();
+
+	// Question variables
 	public int questionNumber;
-
-	public bool isGregAlive;
-	public bool isBrunoAlive;
-	public bool isAlixAlive;
-	public bool isOliviaAlive;
-	public bool isDukeAlive;
-
-	///After initialization, these values will be changed in other files
-
-	public bool hasGregSpoken;
-	public bool hasBrunoSpoken;
-	public bool hasAlixSpoken;
-	public bool hasOliviaSpoken;
-	public bool hasDukeSpoken;
-
-	public string gregResponseType;
-	public string brunoResponseType;
-	public string alixResponseType;
-	public string oliviaResponseType;
-	public string dukeResponseType;
-
-	public string gregResponse;
-	public string brunoResponse;
-	public string alixResponse;
-	public string oliviaResponse;
-	public string dukeResponse;
-
+	public Dictionary<int, string> question1;
+	public Dictionary<int, string> question2;
+	public Dictionary<int, string> question3;
 
 	// Use this for initialization
 	//THIS FUNCTION IS CALLED ONCE PER GAME TO SET STARTING VALUES AND CREATE ALL INSTANCES OF POSSIBLE DIALOGUE
 	void Start () {
-		roundNumber = 1;
+		characters = GetComponent<Characters>(); //theres a bug here
 		resetValuesForNextRound ();
 
-		isGregAlive = true;
-		isBrunoAlive = true;
-		isAlixAlive = true;
-		isOliviaAlive = true;
-		isDukeAlive = true;
+		//Streamer.isAlive = true;
 
-		hasGregSpoken = false;
-		hasBrunoSpoken  = false;
-		hasAlixSpoken = false;
-		hasOliviaSpoken = false;
-		hasDukeSpoken = false;
+		// Initialize responseTypes
+		responseTypes.Add("Snarky");
+		responseTypes.Add("Dramatic");
+		responseTypes.Add("Humorous");
 
-		Streamer.isAlive = true;
+		// Initialize Questions
+		question1 = new Dictionary<int, string>();
+		question1.Add(1, "Where were you last night?");
+		question1.Add(2, " Who do you trust?");
+		question1.Add(3, "How’s your environment at home?");
 
+		question2 = new Dictionary<int, string>();
+		question2.Add(1, "Where were you?");
+		question2.Add(2, " Who do?");
+		question2.Add(3, "How’s your?");
+
+		question3 = new Dictionary<int, string>();
+		question3.Add(1, "Where were you last?");
+		question3.Add(2, " Who do you?");
+		question3.Add(3, "How’s your environment?");
 	}
 
 	// Call function before starting every new round
 	void resetValuesForNextRound() {
+		characters.resetCharactersForNextRound ();
 		roundNumber++;
-		questionNumber = 0; //should be reset to 0 every round, before question is selected
-		//way to tell if question has been selected: if questionNumber != 0
-
-		gregResponseType = "";
-		brunoResponseType = "";
-		alixResponseType = "";
-		oliviaResponseType = "";
-		dukeResponseType = "";
-
-		gregResponse = "";
-		brunoResponse = "";
-		alixResponse = "";
-		oliviaResponse = "";
-		dukeResponse = "";
+		questionNumber = 0; //way to tell if question has been selected: if questionNumber != 0
 	}
 
-	void killGreg() {
-		isGregAlive = false;
-		//checkIfSreamerAlive ();
-	}
 
 	//void checkIfStreamerAlive() {
 	//

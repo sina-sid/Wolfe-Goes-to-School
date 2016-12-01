@@ -5,10 +5,10 @@
       <File FileName="Assets\Scripts\TimerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ScrollText.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UITextTypewriter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" Line="39" Column="2" />
-      <File FileName="Assets\Scripts\Game Logic and Variables\AudienceStreamerVariables.cs" Line="10" Column="30" />
-      <File FileName="Assets\Scripts\Game Logic and Variables\GameLogicTree.cs" Line="16" Column="2" />
-      <File FileName="Assets\Scripts\testScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game Logic and Variables\AudienceStreamerVariables.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game Logic and Variables\GameLogicTree.cs" Line="38" Column="63" />
+      <File FileName="Assets\Scripts\Game Logic and Variables\Characters.cs" Line="39" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
