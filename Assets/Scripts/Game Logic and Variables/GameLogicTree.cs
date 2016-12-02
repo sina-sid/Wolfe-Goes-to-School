@@ -36,8 +36,8 @@ public class GameLogicTree : MonoBehaviour {
 	//THIS FUNCTION IS CALLED ONCE PER GAME TO SET STARTING VALUES AND CREATE ALL INSTANCES OF POSSIBLE DIALOGUE
 	void Start () {
 		characters = GetComponent<Characters>();
-		characters.Start ();
-		Debug.Log (characters.Greg.response);
+		characters.Start (); //does not run. Why?
+		Debug.Log (characters.Greg.response); //why doesn't this print?
 		//Debug.Log (characters.Greg.isAlive.ToString ());
 		characters.resetCharactersForNextRound();
 		resetValuesForNextRound ();
@@ -45,9 +45,9 @@ public class GameLogicTree : MonoBehaviour {
 		//Streamer.isAlive = true;
 
 		// Initialize responseTypes
-		responseTypes.Add("Snarky");
-		responseTypes.Add("Dramatic");
-		responseTypes.Add("Humorous");
+		responseTypes.Add("Blame Someone else");
+		responseTypes.Add("Give an alibi");
+		responseTypes.Add("Take the blame");
 
 		// Initialize Questions
 		question1 = new Dictionary<int, string>();

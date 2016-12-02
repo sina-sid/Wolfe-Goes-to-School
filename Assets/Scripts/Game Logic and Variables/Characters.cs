@@ -18,7 +18,7 @@ public class Characters : MonoBehaviour {
 	public character Olivia;
 	public character Duke;
 
-	// Use this for initialization
+	// Use this for initialization, runs once per game
 	public void Start () {
 		Greg = new character ();
 		Bruno = new character ();
@@ -26,7 +26,6 @@ public class Characters : MonoBehaviour {
 		Olivia = new character ();
 		Duke = new character ();
 
-		Debug.Log ("Ran.");
 		Greg.isAlive = true;
 		Bruno.isAlive = true;
 		Alix.isAlive = true;
@@ -38,8 +37,7 @@ public class Characters : MonoBehaviour {
 		Alix.hasSpoken = false;
 		Olivia.hasSpoken = false;
 		Duke.hasSpoken = false;
-	
-		resetCharactersForNextRound ();
+
 	}
 
 	public void resetCharactersForNextRound () {
