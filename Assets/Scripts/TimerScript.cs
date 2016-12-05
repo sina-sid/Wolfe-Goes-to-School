@@ -16,7 +16,7 @@ public class TimerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		int curTime = (int)(maxTime - Time.fixedTime);
+		int curTime = (int)(maxTime - Time.timeSinceLevelLoad);
 		//string secMillsec = string.Format("{0}:{1:00}", (int)curTime, (int)curTime % 60);
 		//Debug.Log(curTime.ToString());
 
