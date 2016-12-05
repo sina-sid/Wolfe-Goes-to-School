@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\Game Logic and Variables\dialogueScript.cs" />
      <Compile Include="Assets\Scripts\ScrollText.cs" />
      <Compile Include="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" />
+     <Compile Include="Assets\Scripts\StoryTextUITextTypewriter.cs" />
      <Compile Include="Assets\Scripts\TimerScript.cs" />
      <Compile Include="Assets\Scripts\UITextTypewriter.cs" />
      <Compile Include="Assets\Scripts\testTransitionScript.cs" />

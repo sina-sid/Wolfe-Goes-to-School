@@ -6,10 +6,14 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 
 	Text txt;
 	public string response;
-	public bool responsePlayed;
+	public static bool responsePlayed;
+	private static bool startSpeech;
+	bool test;
 
 	void Awake()
 	{
+		
+		//Debug.Log (startSpeech.GetType());
 		responsePlayed = false;
 		txt = GetComponent<Text>(); // temporary! should be selected from another script that deals with the logic 
 
@@ -27,19 +31,25 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 
 	IEnumerator PlayText()
 	{
-		//yield return new WaitUntil(bool);
-		yield return new WaitForSeconds(7);
+		yield return new WaitUntil(() => startSpeech);
+		yield return new WaitForSeconds(1);
 		foreach (char c in response)
 		{
 			txt.text += c;
 			yield return new WaitForSeconds(0.03f);
 		}
 		responsePlayed = true;
+		StoryTextUITextTypewriter.storyIntroPlayed = false;
 	}
-
+		
 	public void clearText ()
 	{
 		StopAllCoroutines();
 		txt.text = "";
+	}
+
+	void Update ()
+	{
+		startSpeech = StoryTextUITextTypewriter.storyIntroPlayed;
 	}
 }
