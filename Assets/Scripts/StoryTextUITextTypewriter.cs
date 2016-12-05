@@ -39,7 +39,7 @@ public class StoryTextUITextTypewriter : MonoBehaviour
 	}
 
 	void Update () {
-		Debug.Log (storyIntroPlayed.ToString ());
+//		Debug.Log (storyIntroPlayed.ToString ());
 	}
 
 	public void clearText ()

@@ -4,14 +4,15 @@
     <Files>
       <File FileName="Assets\Scripts\TimerScript.cs" Line="27" Column="22" />
       <File FileName="Assets\Scripts\ScrollText.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UITextTypewriter.cs" Line="34" Column="4" />
-      <File FileName="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\StoryTextUITextTypewriter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UITextTypewriter.cs" Line="14" Column="1" />
+      <File FileName="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" Line="42" Column="3" />
+      <File FileName="Assets\Scripts\StoryTextUITextTypewriter.cs" Line="42" Column="3" />
       <File FileName="Assets\Scripts\Game Logic and Variables\AudienceStreamerVariables.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Game Logic and Variables\GameLogicTree.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Game Logic and Variables\Characters.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\testTransitionScript.cs" Line="2" Column="1" />
-      <File FileName="Assets\Scripts\VotingTransitionScript.cs" Line="7" Column="31" />
+      <File FileName="Assets\Scripts\testTransitionScript.cs" Line="19" Column="36" />
+      <File FileName="Assets\Scripts\VotingTransitionScript.cs" Line="18" Column="53" />
+      <File FileName="Assets\Scripts\StoryTransitionScript.cs" Line="20" Column="90" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

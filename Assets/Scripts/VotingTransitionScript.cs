@@ -5,22 +5,28 @@ using UnityEngine.SceneManagement;
 public class VotingTransitionScript : MonoBehaviour {
 
 	public float changeAfter = 70;
+	private string sceneName;
 
 	// Use this for initialization
 	void Start () {
-	
+		Scene scene = SceneManager.GetActiveScene();
+		sceneName = scene.name;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		int curTime = (int)(changeAfter - Time.fixedTime);
+		int curTime = (int)(changeAfter - Time.deltaTime);
 		if (curTime <= 0) {
+			
 			changeScene ();
 		}
 	}
 
 	public void changeScene () {
-		SceneManager.LoadScene ("questionAnswerScene");
-
+		if (sceneName == "votingQuestionScene") {
+			SceneManager.LoadScene ("questionAnswerScene");
+		} else if (sceneName == "votingStudentScene") {
+			SceneManager.LoadScene ("classroomStoryScene");
+		}
 	}
 }
