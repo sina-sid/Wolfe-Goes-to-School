@@ -9,9 +9,11 @@ public class UITextTypewriter : MonoBehaviour
 
 	Text txt;
 	public string story;
+	private float speed;
 
 	void Awake()
 	{
+		speed = 0.03f;
 		txt = GetComponent<Text>();
 
 		story = txt.text;
@@ -31,7 +33,7 @@ public class UITextTypewriter : MonoBehaviour
 		foreach (char c in story)
 		{
 			txt.text += c;
-			yield return new WaitForSeconds(0.03f);
+			yield return new WaitForSeconds(speed);
 		}
 	}
 
