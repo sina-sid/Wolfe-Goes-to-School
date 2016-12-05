@@ -73,6 +73,7 @@
      <Compile Include="Assets\Narrate\Scripts\Triggers\OnEnableNarrationTrigger.cs" />
      <Compile Include="Assets\Narrate\Scripts\Triggers\ProximityNarrationTrigger.cs" />
      <Compile Include="Assets\Narrate\Scripts\Triggers\TimerNarrationTrigger.cs" />
+     <Compile Include="Assets\Scripts\DisplaySpeechBubble.cs" />
      <Compile Include="Assets\Scripts\Game Logic and Variables\AudienceStreamerVariables.cs" />
      <Compile Include="Assets\Scripts\Game Logic and Variables\Characters.cs" />
      <Compile Include="Assets\Scripts\Game Logic and Variables\GameLogicTree.cs" />

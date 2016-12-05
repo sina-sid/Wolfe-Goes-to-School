@@ -25,7 +25,7 @@ public class TimerScript : MonoBehaviour {
 		}
 
 		if (curTime <= 0) {
-			timer.text = "00:00";
+			timer.text = "0:00";
 		} else {
 			int minutes = Mathf.FloorToInt(curTime / 60F);
 			int seconds = Mathf.FloorToInt(curTime - minutes * 60);

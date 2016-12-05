@@ -8,11 +8,9 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 	public string response;
 	public static bool responsePlayed;
 	private static bool startSpeech;
-	bool test;
 
 	void Awake()
 	{
-		
 		//Debug.Log (startSpeech.GetType());
 		responsePlayed = false;
 		txt = GetComponent<Text>(); // temporary! should be selected from another script that deals with the logic 
@@ -23,7 +21,7 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 		// TODO: need a way to find out when the story is complete (use global bool?) and then start Coroutine
 		StartCoroutine("PlayText");
 	}
-
+		
 	public void startAnimation ()
 	{
 		StartCoroutine("PlayText");
@@ -32,7 +30,7 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 	IEnumerator PlayText()
 	{
 		yield return new WaitUntil(() => startSpeech);
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(0.5f);
 		foreach (char c in response)
 		{
 			txt.text += c;
