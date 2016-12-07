@@ -16,7 +16,7 @@ public class VotingTransitionScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int curTime = (int)(changeAfter - Time.timeSinceLevelLoad);
-		Debug.Log (curTime.ToString ());
+//		Debug.Log (curTime.ToString ());
 		if (curTime <= 0) {
 			
 			changeScene ();
