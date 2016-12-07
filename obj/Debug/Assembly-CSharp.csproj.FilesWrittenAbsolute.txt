@@ -1,0 +1,17 @@
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/obj/Debug/Assembly-CSharp.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/UnityEngine.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/UnityEditor.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Mono.Cecil.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Unity.DataContract.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Temp/bin/Debug/Mono.Cecil.Mdb.dll

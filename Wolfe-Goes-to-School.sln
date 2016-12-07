@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{06D8F076-B7F2-0DB0-2DCD-E69D1E134FAF}") = "Wolfe-Goes-to-School", "Assembly-CSharp.csproj", "{532E12C5-7808-D2F1-785C-55BB465D9826}"
+EndProject
+Project("{06D8F076-B7F2-0DB0-2DCD-E69D1E134FAF}") = "Wolfe-Goes-to-School", "Assembly-CSharp-Editor.csproj", "{B6DA740A-877B-CEEA-BE70-CCCA12936409}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{532E12C5-7808-D2F1-785C-55BB465D9826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532E12C5-7808-D2F1-785C-55BB465D9826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532E12C5-7808-D2F1-785C-55BB465D9826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532E12C5-7808-D2F1-785C-55BB465D9826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6DA740A-877B-CEEA-BE70-CCCA12936409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DA740A-877B-CEEA-BE70-CCCA12936409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DA740A-877B-CEEA-BE70-CCCA12936409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DA740A-877B-CEEA-BE70-CCCA12936409}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
