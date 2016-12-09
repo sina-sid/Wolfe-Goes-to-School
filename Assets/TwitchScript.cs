@@ -55,7 +55,7 @@ public class TwitchScript : MonoBehaviour {
 			int val = (int)questionChoice[key];
 
 			if (choiceHash.ContainsKey (val)) {
-				choiceHash [val] = choiceHash [val] += 1;
+				choiceHash [val] = ((int)choiceHash [val]) + 1; 
 			} else {
 				choiceHash.Add (val, 1); 
 			}
@@ -81,7 +81,7 @@ public class TwitchScript : MonoBehaviour {
 			int val = (int)votes[key];
 
 			if (choiceHash.ContainsKey (val)) {
-				choiceHash [val] = choiceHash [val] += 1;
+				choiceHash [val] = ((int)choiceHash [val]) + 1; 
 			} else {
 				choiceHash.Add (val, 1); 
 			}
@@ -163,9 +163,11 @@ public class TwitchScript : MonoBehaviour {
 				// was successful
 				Vote (username, x); 
 			}
+				
+		}
 
-
-
+		if (str.Equals("History")) {
+			displayMessage ("Foo"); 
 		}
 
 
