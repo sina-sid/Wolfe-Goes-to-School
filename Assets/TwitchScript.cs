@@ -8,9 +8,14 @@ public class TwitchScript : MonoBehaviour {
 	bool connected; 
 	public string delimiter;
 
+	public Hashtable votes; 
+	public Hashtable questionChoice; 
+
 	// Use this for initialization
 	void Start () {
 		IRC = this.GetComponent<TwitchIRC>();
+		votes = new Hashtable();
+		questionChoice = new Hashtable (); 
 
 		if (IRC == null) {
 			Debug.Log ("THIS IS NULL"); 
@@ -39,15 +44,73 @@ public class TwitchScript : MonoBehaviour {
 		//Form: “PRIVMSG #nickName: message”
 		convertMsg(msg); 
 
-
-
 	}
 
 
-	public void Vote(string username, string choice)
+	//return 
+	public int questionWinner() {
+		Hashtable choiceHash = new Hashtable ();  
+		int max = -1; 
+		foreach (string key in questionChoice.Keys) {
+			int val = (int)questionChoice[key];
+
+			if (choiceHash.ContainsKey (val)) {
+				choiceHash [val] = choiceHash [val] += 1;
+			} else {
+				choiceHash.Add (val, 1); 
+			}
+		}
+
+
+		foreach (int key in choiceHash.Keys) {
+			int val = (int)choiceHash[key];
+			if (val > max) {
+				max = val; 
+			}
+		}
+
+		return max; 
+	}
+
+
+
+	public int votesWinner() {
+		Hashtable choiceHash = new Hashtable ();  
+		int max = -1; 
+		foreach (string key in votes.Keys) {
+			int val = (int)votes[key];
+
+			if (choiceHash.ContainsKey (val)) {
+				choiceHash [val] = choiceHash [val] += 1;
+			} else {
+				choiceHash.Add (val, 1); 
+			}
+		}
+
+
+		foreach (int key in choiceHash.Keys) {
+			int val = (int)choiceHash[key];
+			if (val > max) {
+				max = val; 
+			}
+		}
+		return max; 
+	}
+
+
+	public void displayMessage(string str) {
+		IRC.SendMsg (str); 
+	}
+		
+	public void Vote(string username, int choice)
 	{
-		Debug.Log (username + " voted: " + choice); 
+		votes.Add (username, choice); 
 	}
+
+	public void Question(string username, int choice) {
+		questionChoice.Add (username, choice); 
+	}
+
 
 
 	public void convertMsg(string str) {
@@ -76,9 +139,33 @@ public class TwitchScript : MonoBehaviour {
 				
 		}
 
+		int x = -1; 
+		if (cmd.Contains ("Question") && !(str.Equals("Question") || str.Equals("Question:") )) {
 
-		if (cmd.Contains ("Vote")) {
-			Vote (username, str); 
+		
+			if (int.TryParse(str, out x))
+			{
+				// you know that the parsing attempt
+				// was successful
+				Question (username, x); 
+			}
+
+
+
+
+		}
+		if (cmd.Contains ("Vote") && !(str.Equals("Vote") || str.Equals("Vote:") )) {
+
+
+			if (int.TryParse(str, out x))
+			{
+				// you know that the parsing attempt
+				// was successful
+				Vote (username, x); 
+			}
+
+
+
 		}
 
 
