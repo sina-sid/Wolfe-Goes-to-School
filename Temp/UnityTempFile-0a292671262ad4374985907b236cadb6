@@ -123,6 +123,7 @@
 'Assets/Scripts/Game Logic and Variables/GameLogicTree.cs'
 'Assets/Scripts/Game Logic and Variables/dialogueScript.cs'
 'Assets/Scripts/ScrollText.cs'
+'Assets/Scripts/SimpleJSON.cs'
 'Assets/Scripts/SpeechBubbleUITextTypewriter.cs'
 'Assets/Scripts/StoryTextUITextTypewriter.cs'
 'Assets/Scripts/StoryTransitionScript.cs'

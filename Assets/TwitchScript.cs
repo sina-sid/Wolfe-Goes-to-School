@@ -13,6 +13,11 @@ public class TwitchScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
+
+
+
 		IRC = this.GetComponent<TwitchIRC>();
 		votes = new Hashtable();
 		questionChoice = new Hashtable (); 
