@@ -321,8 +321,6 @@ public class GameLogicTree : MonoBehaviour {
 
 	public void kill(string name) {
 		foreach (Round r in rounds) {
-
-
 			for (int i = 0; i < r.Q1.Characters.Count; i++) {
 				Round.Character c = r.Q1.Characters [i]; 
 				if (c.name.Equals (name)) {
@@ -341,9 +339,6 @@ public class GameLogicTree : MonoBehaviour {
 					c.isAlive = false; 
 				}
 			}
-
-
-
 		}
 	}
 
