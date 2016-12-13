@@ -84,6 +84,9 @@ public class GameLogicTree : MonoBehaviour {
 	public Dictionary<int, string> question2;
 	public Dictionary<int, string> question3;
 
+
+	public List<Round> rounds; 
+
 	// Use this for initialization
 	//THIS FUNCTION IS CALLED ONCE PER GAME TO SET STARTING VALUES AND CREATE ALL INSTANCES OF POSSIBLE DIALOGUE
 	void Start () {
@@ -127,6 +130,10 @@ public class GameLogicTree : MonoBehaviour {
 
 
 	void parseRounds() {
+
+
+		rounds = new List<Round> (); 
+
 		TextAsset r1 = Resources.Load("round1") as TextAsset; 
 		var N = JSON.Parse(r1.text);
 		Round round1 = new Round(); 
@@ -182,9 +189,12 @@ public class GameLogicTree : MonoBehaviour {
 		round1.Q3 = q3; 
 
 
+		rounds.Add (round1); 
+
+
 		Round round2 = new Round (); 
 		TextAsset r2Txt = Resources.Load("round2") as TextAsset; 
-		var parsedR2 = JSON.Parse(r2.text);
+		var parsedR2 = JSON.Parse(r2Txt.text);
 
 
 
@@ -239,13 +249,13 @@ public class GameLogicTree : MonoBehaviour {
 			q3.Characters.Add (character); 
 		}
 		round2.Q3 = q3; 
-
+		rounds.Add (round2); 
 
 
 
 		Round round3 = new Round (); 
 		TextAsset r3Txt = Resources.Load("round3") as TextAsset; 
-		var parsedR3 = JSON.Parse(r3.text);
+		var parsedR3 = JSON.Parse(r3Txt.text);
 
 
 		q1 = new Round.Question(); 
@@ -298,6 +308,7 @@ public class GameLogicTree : MonoBehaviour {
 			q3.Characters.Add (character); 
 		}
 		round3.Q3 = q3; 
+		rounds.Add (round3); 
 
 
 
