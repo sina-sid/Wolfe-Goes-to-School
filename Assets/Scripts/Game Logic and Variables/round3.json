@@ -1,0 +1,137 @@
+{  
+   "Question1":{  
+      "title":"How’s your environment at home?",
+      "characters":[  
+         {  
+            "name":"bruno",
+            "neutral":"It’s kind of like the emergency room; exciting, scary, and a little bit bloody.",
+            "self":"Probably better than yours.",
+            "primary":"Probably better than Alix’s...that kid is always crying at school, yikes.",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"bruno",
+            "neutral":"Well, other than all the paint stains and the fact that every wall is a mural, it’s a pretty chill place.",
+            "self":"It’s fine...why do you ask? I don’t have anything to hide!!!",
+            "primary":"Great. My art is selling like hotcakes. I think the Jock stole my red paint though.",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Alix",
+            "neutral":"Potasi-AWESOME!",
+            "self":"Why are you asking? Is it because of the stains on my shirt? I promise it was only from art class the other day!",
+            "primary":"Pretty solid, like a diamond. I did find some red fingerprints and a stethoscope near my beakers the other day, which is a little concerning...",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Olivia",
+            "neutral":"Pretty fun, it’s like a different court case every day!",
+            "self":"Definitely normal. Nothing strange going on at home at all!!!",
+            "primary":"Fine here. Why don’t you ask Bruno instead, he seems a little off his rocker most of the time...",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Duke",
+            "neutral":"Basketballs. Everywhere. ",
+            "self":"My mom has recently taken up art, so there are paint brushes and canvasses all over the place. ",
+            "primary":"I’m doing great. I heard Olivia is having some trouble, though. ",
+            "secondary":"",
+            "tertiary":""
+         }
+      ]
+   },
+   "Question2":{  
+      "title":"What do you think of me as a teacher?",
+      "characters":[  
+         {  
+            "name":"greg",
+            "neutral":"Eh you’re alright.",
+            "self":"Last week you forgot how to do long division, so….my stethoscope would make a better teacher.",
+            "primary":"I personally like you, but Alix said that you irritated her almost as much as Timmy did. ",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"bruno",
+            "neutral":"You’re average.",
+            "self":"You’re the teaching equivalent of a frayed paintbrush. Overused and useless. ",
+            "primary":" Ha, wanna hear something funny? Duke called you the teaching equivalent of a frayed paintbrush. Overused and useless.  ",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Alix",
+            "neutral":"Potasi-AWESOME!",
+            "self":"Well, you’re no scientist. ",
+            "primary":"The doctor always brags about how he could teach this class waaayy better than you can. ",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Olivia",
+            "neutral":"You’re alright I guess. ",
+            "self":"You could have a better grip on the constitution, to be honest.",
+            "primary":" I think you’re a pretty good teacher. I heard Bruno talking trash about you though...",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Duke",
+            "neutral":"You’re good with me. ",
+            "self":"Eh, you can’t even throw a basketball. ",
+            "primary":"Haha Olivia and I love pulling pranks on you. Remember that whoopie cushion one??",
+            "secondary":"",
+            "tertiary":""
+         }
+      ]
+   },
+   "Question3":{  
+      "title":"How do you think school is going?",
+      "characters":[  
+         {  
+            "name":"greg",
+            "neutral":"Just like a normal day in the ER: hectic and tiresome.",
+            "self":"A lot better now that the two most annoying kids are gone.",
+            "primary":"It’s okay...I overhead Alix talking smack about me the other day though. \n",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"bruno",
+            "neutral":"I have as many A’s as I do paint brushes. That’s a lot, FYI...",
+            "self":"I’m killing it...not literally though...the wolf is doing that.",
+            "primary":" It’s going pretty well. I finally got the stain out from my painting apron. Stupid jock got red goo all over it.",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Alix",
+            "neutral":"Potasi-AWESOME!",
+            "self":"Why are you asking? Is it because of the stains on my shirt? I promise it was only from art class the other day!",
+            "primary":"I’m really enjoying history class. However, I think the doctor might have stolen my history textbook the other day, because I saw it lying on her desk open to a pretty weird page. ",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Olivia",
+            "neutral":" I tend to excel at whatever I do, so school is a piece of cake.",
+            "self":"Everything’s great! I’m especially excelling at art right now. I’ve been practicing my penmanship too...I like writing in big, loopy letters.\n",
+            "primary":"I think this class is fun, even though Bruno was being mean to me last week.",
+            "secondary":"",
+            "tertiary":""
+         },
+         {  
+            "name":"Duke",
+            "neutral":"Well, a kid disappeared yesterday, so not too well. \n",
+            "self":"Well, a kid disappeared yesterday, so...pretty well. ",
+            "primary":"I find it hard to enjoy my favorite subjects when Olivia is constantly whining about how annoying everyone is. ",
+            "secondary":"",
+            "tertiary":""
+         }
+      ]
+   }
+}

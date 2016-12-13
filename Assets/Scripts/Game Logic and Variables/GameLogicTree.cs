@@ -19,6 +19,8 @@ public struct AudienceSelection {
 
 
 
+public List<
+
 
 
 
@@ -29,11 +31,15 @@ public struct Round
 	public struct Character
 	{
 		public bool isAlive;
+		public bool isWolf; 
+		public bool isResponsePlayed; 
 		public string name; 
 		public bool hasSpoken;
 		public string neutralResponse; 
 		public string selfResponse; 
 		public string primaryResponse; 
+		public string secondaryResponse; 
+		public string tertiaryResponse; 
 
 	}
 
@@ -125,6 +131,9 @@ public class GameLogicTree : MonoBehaviour {
 		var N = JSON.Parse(r1.text);
 		Round round1 = new Round(); 
 
+
+
+
 		Round.Question q1 = new Round.Question(); 
 		q1.title = N ["Question1"] ["title"].Value; 
 		JSONArray arr = N["Question1"]["characters"].AsArray;
@@ -135,6 +144,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = ""; 
 			q1.Characters.Add (character); 
 		}
 		round1.Q1 = q1; 
@@ -150,6 +160,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = ""; 
 			q2.Characters.Add (character); 
 		}
 		round1.Q2 = q2; 
@@ -165,9 +176,134 @@ public class GameLogicTree : MonoBehaviour {
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = ""; 
 			q3.Characters.Add (character); 
 		}
 		round1.Q3 = q3; 
+
+
+		Round round2 = new Round (); 
+		TextAsset r2Txt = Resources.Load("round2") as TextAsset; 
+		var parsedR2 = JSON.Parse(r2.text);
+
+
+
+
+
+
+
+
+		q1 = new Round.Question(); 
+		q1.title = parsedR2 ["Question1"] ["title"].Value; 
+		arr = parsedR2["Question1"]["characters"].AsArray;
+		q1.Characters = new List<Round.Character> (); 
+		for (int i = 0; i < arr.Count; i++) {
+			Round.Character character = new Round.Character ();  
+			character.name = arr[i]["name"].Value; 
+			character.neutralResponse = arr[i]["neutral"].Value; 
+			character.selfResponse = arr[i]["self"].Value; 
+			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = arr[i]["secondary"].Value; 
+			q1.Characters.Add (character); 
+		}
+		round2.Q1 = q1; 
+
+
+		q2 = new Round.Question(); 
+		q2.title = parsedR2["Question2"] ["title"].Value; 
+		arr = parsedR2["Question2"]["characters"].AsArray;
+		q2.Characters = new List<Round.Character> (); 
+		for (int i = 0; i < arr.Count; i++) {
+			Round.Character character = new Round.Character ();  
+			character.name = arr[i]["name"].Value; 
+			character.neutralResponse = arr[i]["neutral"].Value; 
+			character.selfResponse = arr[i]["self"].Value; 
+			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = arr[i]["secondary"].Value; 
+			q2.Characters.Add (character); 
+		}
+		round2.Q2 = q2; 
+
+
+		q3 = new Round.Question(); 
+		q3.title = N ["Question3"] ["title"].Value; 
+		arr = N["Question3"]["characters"].AsArray;
+		q3.Characters = new List<Round.Character> (); 
+		for (int i = 0; i < arr.Count; i++) {
+			Round.Character character = new Round.Character ();  
+			character.name = arr[i]["name"].Value; 
+			character.neutralResponse = arr[i]["neutral"].Value; 
+			character.selfResponse = arr[i]["self"].Value; 
+			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = arr[i]["secondary"].Value; 
+			q3.Characters.Add (character); 
+		}
+		round2.Q3 = q3; 
+
+
+
+
+		Round round3 = new Round (); 
+		TextAsset r3Txt = Resources.Load("round3") as TextAsset; 
+		var parsedR3 = JSON.Parse(r3.text);
+
+
+		q1 = new Round.Question(); 
+		q1.title = parsedR3 ["Question1"] ["title"].Value; 
+		arr = parsedR3["Question1"]["characters"].AsArray;
+		q1.Characters = new List<Round.Character> (); 
+		for (int i = 0; i < arr.Count; i++) {
+			Round.Character character = new Round.Character ();  
+			character.name = arr[i]["name"].Value; 
+			character.neutralResponse = arr[i]["neutral"].Value; 
+			character.selfResponse = arr[i]["self"].Value; 
+			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = arr[i]["secondary"].Value; 
+			character.tertiaryResponse = arr[i]["tertiary"].Value; 
+
+			q1.Characters.Add (character); 
+		}
+		round3.Q1 = q1; 
+
+
+		q2 = new Round.Question(); 
+		q2.title = parsedR3["Question2"] ["title"].Value; 
+		arr = parsedR3["Question2"]["characters"].AsArray;
+		q2.Characters = new List<Round.Character> (); 
+		for (int i = 0; i < arr.Count; i++) {
+			Round.Character character = new Round.Character ();  
+			character.name = arr[i]["name"].Value; 
+			character.neutralResponse = arr[i]["neutral"].Value; 
+			character.selfResponse = arr[i]["self"].Value; 
+			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = arr[i]["secondary"].Value; 
+			character.tertiaryResponse = arr[i]["tertiary"].Value; 
+			q2.Characters.Add (character); 
+		}
+		round3.Q2 = q2; 
+
+
+		q3 = new Round.Question(); 
+		q3.title = parsedR3["Question3"] ["title"].Value; 
+		arr = parsedR3["Question3"]["characters"].AsArray;
+		q3.Characters = new List<Round.Character> (); 
+		for (int i = 0; i < arr.Count; i++) {
+			Round.Character character = new Round.Character ();  
+			character.name = arr[i]["name"].Value; 
+			character.neutralResponse = arr[i]["neutral"].Value; 
+			character.selfResponse = arr[i]["self"].Value; 
+			character.primaryResponse = arr[i]["primary"].Value; 
+			character.secondaryResponse = arr[i]["secondary"].Value; 
+			character.tertiaryResponse = arr[i]["tertiary"].Value; 
+			q3.Characters.Add (character); 
+		}
+		round3.Q3 = q3; 
+
+
+
+
+
+
 
 	}
 
