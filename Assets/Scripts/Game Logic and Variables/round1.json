@@ -3,34 +3,34 @@
       "title":"Where were you last night?",
       "characters":[
          {
-            "name":"greg",
+            "name":"Greg",
             "neutral":"Only saving lives!! Not that it matters now that this wolf is on the prowl.",
             "self":" Oh, nowhere in particular...I did happen to run into Timmy at some point tho. He looked kinda scared. ",
             "primary":"Well, I was wheeling a patient into the operation room, but then I got distracted by a broken beaker lying near me."
          },
          {
-            "name":"bruno",
+            "name":"Bruno",
             "neutral":"Just working on my next masterpiece. I call it “Go Away.” ",
             "self":"I was sketching out different murder scenes.",
-            "primary":" I was walking home from my night art class when I ran into Timmy and the jock. Weird how they were on campus so late..."
+            "primary":" I was walking home from my night art class when I ran into Timmy and Duke. Weird how they were on campus so late..."
          },
          {
             "name":"Alix",
             "neutral":" Well, I was sitting at home trying to figure out what the word was for an ‘educated tube’ - then it came to me: a graduated cylinder!",
             "self":" Waiting in line for the tetherball court. Why do you ask?",
-            "primary":"Waiting in line for the tetherball court. The stupid doctor and Timmy were hogging it forever. "
+            "primary":"Waiting in line for the tetherball court. Stupid Greg and Timmy were hogging it forever. "
          },
          {
             "name":"Olivia",
             "neutral":"  Just doing some homework.",
             "self":" Playing monopoly. It’s one of my favorite games!",
-            "primary":"I had a playdate with the artist, but then he got a weird phone call and said he had somewhere to be and left. "
+            "primary":"I had a playdate with Bruno, but then he got a weird phone call and said he had somewhere to be and left. "
          },
          {
             "name":"Duke",
             "neutral":"Uhhh...playing football, duh. ",
             "self":"It was the final minute of the last game of the youth football season and I had just scored the winning goal, when all of a sudden I heard a high-pitched scream from behind the bleachers.",
-            "primary":" It was the final minute of the last game of the youth football season and I had just scored the winning goal, and from the corner of my eye, I saw the lawyer slip out from behind the bleachers with a weird red stain on his shirt."
+            "primary":" It was the final minute of the last game of the youth football season and I had just scored the winning goal, and from the corner of my eye, I saw Olivia slip out from behind the bleachers with a weird red stain on her shirt."
          }
       ]
    },
@@ -41,31 +41,31 @@
             "name":"greg",
             "neutral":" I love everyone!",
             "self":" If I had to pick one, then I’d honestly have to say Timmy. Kinda glad that kid is off our backs. ",
-            "primary":"That scientist fellow...he’s always thinking he’s better than me."
+            "primary":"Alix...she’s always thinking she’s better than me."
          },
          {
             "name":"bruno",
             "neutral":"Honestly, the only thing that annoys me is when people don’t clean their paintbrushes properly.",
             "self":" Literally everyone. No one understands the importance of art here.",
-            "primary":" I usually try to go with the flow, but that jock knocked over my paintbrushes yesterday with his basketball, so I’m not his biggest fan."
+            "primary":" I usually try to go with the flow, but Duke knocked over my paintbrushes yesterday with his basketball, so I’m not his biggest fan."
          },
          {
             "name":"Alix",
             "neutral":"I only get annoyed at whoever breaks a beaker. ",
-            "self":" That doctor sure thinks he’s better than me. My lab coat is just as good as his!!! I’ll show him. ",
-            "primary":"That doctor sure thinks he’s better than me. My lab coat is just as good as his!!! I heard he broke into the classroom a couple nights ago to ruin mine."
+            "self":" That Greg sure thinks he’s better than me. My lab coat is just as good as his!!! I’ll show him. ",
+            "primary":"That Greg sure thinks he’s better than me. My lab coat is just as good as his!!! I heard he broke into the classroom a couple nights ago to ruin mine."
          },
          {
             "name":"Olivia",
             "neutral":" The entire school system is inherently flawed, forcing us to slowly turn on each other, one by one.",
             "self":"Timmy.",
-            "primary":"Ugh, the artist is the worst, always waving around his paintbrush like it’s a gavel or something"
+            "primary":"Ugh, Bruno is the worst, always waving around his paintbrush like it’s a gavel or something"
          },
          {
             "name":"Duke",
             "neutral":"The teacher haha, am I right?? *high five*",
             "self":"Honestly, I try to be nice to everyone here, but sometimes that Timmy kid really got on my nerves.",
-            "primary":"Honestly, I try to be nice to everyone here, but sometimes that lawyer kid really gets on my nerves."
+            "primary":"Honestly, I try to be nice to everyone here, but sometimes that Olivia kid really gets on my nerves."
          }
       ]
    },
@@ -76,13 +76,13 @@
             "name":"greg",
             "neutral":"Operation, obviously!",
             "self":" I was playing tetherball with Timmy last night. Does that count?",
-            "primary":" I don’t have time to play games, I’m not a scientist."
+            "primary":" I don’t have time to play games, I’m not Alix."
          },
          {
             "name":"bruno",
             "neutral":"Well I excel at pictionary, obviously.",
             "self":" My true passion is playing mind games.",
-            "primary":"I personally enjoy playing tetherball, but when I went to go play last night, I saw the jock and Timmy were using the only available court. "
+            "primary":"I personally enjoy playing tetherball, but when I went to go play last night, I saw Duke and Timmy were using the only available court. "
          },
          {
             "name":"Alix",
@@ -94,13 +94,13 @@
             "name":"Olivia",
             "neutral":"Putting a suit on and pretending I’m the lawyer for a high-profile case! I can always figure out who’s guilty. ",
             "self":"I used to mess with Timmy a lot, steal his pens, give him a good ol ruff up. ",
-            "primary":"I really used to enjoy watching that artist kid “accidentally” splash paint on Timmy. Haha he really hated him. "
+            "primary":"I really used to enjoy watching Bruno “accidentally” splash paint on Timmy. Haha he really hated him. "
          },
          {
             "name":"Duke",
             "neutral":"I’ve been tossing a ball around since I came out of the womb. ",
             "self":" I actually really enjoy playing Monopoly. HA JK! FOOTBALL ALL DAY EVERY DAY!",
-            "primary":"Messing with that lawyer kid. He’s quite the bully actually. "
+            "primary":"Messing with Olivia. She’s quite the bully actually. "
          }
       ]
    }

@@ -3,44 +3,44 @@
       "title":"How’s your environment at home?",
       "characters":[  
          {  
-            "name":"bruno",
+            "name":"Greg",
             "neutral":"It’s kind of like the emergency room; exciting, scary, and a little bit bloody.",
             "self":"Probably better than yours.",
             "primary":"Probably better than Alix’s...that kid is always crying at school, yikes.",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"Probably better than Duke’s...that kid is always crying at school, yikes.",
+            "tertiary":"Probably better than Bruno’s...that kid is always crying at school, yikes."
          },
          {  
-            "name":"bruno",
+            "name":"Bruno",
             "neutral":"Well, other than all the paint stains and the fact that every wall is a mural, it’s a pretty chill place.",
             "self":"It’s fine...why do you ask? I don’t have anything to hide!!!",
-            "primary":"Great. My art is selling like hotcakes. I think the Jock stole my red paint though.",
-            "secondary":"",
-            "tertiary":""
+            "primary":"Great. My art is selling like hotcakes. I think Duke stole my red paint though.",
+            "secondary":"Great. My art is selling like hotcakes. I think Olivia stole my red paint though.",
+            "tertiary":"Great. My art is selling like hotcakes. I think Greg stole my red paint though."
          },
          {  
             "name":"Alix",
             "neutral":"Potasi-AWESOME!",
             "self":"Why are you asking? Is it because of the stains on my shirt? I promise it was only from art class the other day!",
             "primary":"Pretty solid, like a diamond. I did find some red fingerprints and a stethoscope near my beakers the other day, which is a little concerning...",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"Pretty solid, like a diamond. I did find some red fingerprints and a paintbrush near my beakers the other day, which is a little concerning...",
+            "tertiary":"Pretty solid, like a diamond. I did find some red fingerprints and a gavel near my beakers the other day, which is a little concerning..."
          },
          {  
             "name":"Olivia",
             "neutral":"Pretty fun, it’s like a different court case every day!",
             "self":"Definitely normal. Nothing strange going on at home at all!!!",
             "primary":"Fine here. Why don’t you ask Bruno instead, he seems a little off his rocker most of the time...",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"Fine here. Why don’t you ask Alix instead, she seems a little off her rocker most of the time...",
+            "tertiary":"Fine here. Why don’t you ask Duke instead, he seems a little off her rocker most of the time..."
          },
          {  
             "name":"Duke",
             "neutral":"Basketballs. Everywhere. ",
             "self":"My mom has recently taken up art, so there are paint brushes and canvasses all over the place. ",
-            "primary":"I’m doing great. I heard Olivia is having some trouble, though. ",
-            "secondary":"",
-            "tertiary":""
+            "primary":"I’m doing great. I heard Olivia is having some trouble, though.",
+            "secondary":"I’m doing great. I heard Greg is having some trouble, though.",
+            "tertiary":"I’m doing great. I heard Alix is having some trouble, though."
          }
       ]
    },
@@ -48,44 +48,44 @@
       "title":"What do you think of me as a teacher?",
       "characters":[  
          {  
-            "name":"greg",
+            "name":"Greg",
             "neutral":"Eh you’re alright.",
             "self":"Last week you forgot how to do long division, so….my stethoscope would make a better teacher.",
             "primary":"I personally like you, but Alix said that you irritated her almost as much as Timmy did. ",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"I personally like you, but Duke said that you irritated him almost as much as Timmy did.",
+            "tertiary":"I personally like you, but Bruno said that you irritated him almost as much as Timmy did."
          },
          {  
-            "name":"bruno",
+            "name":"Bruno",
             "neutral":"You’re average.",
             "self":"You’re the teaching equivalent of a frayed paintbrush. Overused and useless. ",
-            "primary":" Ha, wanna hear something funny? Duke called you the teaching equivalent of a frayed paintbrush. Overused and useless.  ",
-            "secondary":"",
-            "tertiary":""
+            "primary":"Ha, wanna hear something funny? Duke called you the teaching equivalent of a frayed paintbrush. Overused and useless.  ",
+            "secondary":"Ha, wanna hear something funny? Olivia called you the teaching equivalent of a frayed paintbrush. Overused and useless.",
+            "tertiary":"Ha, wanna hear something funny? Greg called you the teaching equivalent of a frayed paintbrush. Overused and useless."
          },
          {  
             "name":"Alix",
             "neutral":"Potasi-AWESOME!",
             "self":"Well, you’re no scientist. ",
-            "primary":"The doctor always brags about how he could teach this class waaayy better than you can. ",
-            "secondary":"",
-            "tertiary":""
+            "primary":"Greg always brags about how he could teach this class waaayy better than you can. ",
+            "secondary":"Bruno always brags about how he could teach this class waaayy better than you can.",
+            "tertiary":"Olivia always brags about how he could teach this class waaayy better than you can."
          },
          {  
             "name":"Olivia",
             "neutral":"You’re alright I guess. ",
             "self":"You could have a better grip on the constitution, to be honest.",
             "primary":" I think you’re a pretty good teacher. I heard Bruno talking trash about you though...",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"I think you’re a pretty good teacher. I heard Alix talking trash about you though...",
+            "tertiary":"I think you’re a pretty good teacher. I heard Olivia talking trash about you though..."
          },
          {  
             "name":"Duke",
             "neutral":"You’re good with me. ",
             "self":"Eh, you can’t even throw a basketball. ",
             "primary":"Haha Olivia and I love pulling pranks on you. Remember that whoopie cushion one??",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"Haha Greg and I love pulling pranks on you. Remember that whoopie cushion one??",
+            "tertiary":"Haha Alix and I love pulling pranks on you. Remember that whoopie cushion one??"
          }
       ]
    },
@@ -93,44 +93,44 @@
       "title":"How do you think school is going?",
       "characters":[  
          {  
-            "name":"greg",
+            "name":"Greg",
             "neutral":"Just like a normal day in the ER: hectic and tiresome.",
             "self":"A lot better now that the two most annoying kids are gone.",
             "primary":"It’s okay...I overhead Alix talking smack about me the other day though. \n",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"It’s okay...I overhead Duke talking smack about me the other day though.",
+            "tertiary":"It’s okay...I overhead Bruno talking smack about me the other day though."
          },
          {  
-            "name":"bruno",
+            "name":"Bruno",
             "neutral":"I have as many A’s as I do paint brushes. That’s a lot, FYI...",
             "self":"I’m killing it...not literally though...the wolf is doing that.",
-            "primary":" It’s going pretty well. I finally got the stain out from my painting apron. Stupid jock got red goo all over it.",
-            "secondary":"",
-            "tertiary":""
+            "primary":" It’s going pretty well. I finally got the stain out from my painting apron. Stupid Duke got red goo all over it.",
+            "secondary":"It’s going pretty well. I finally got the stain out from my painting apron. Stupid Olivia got red goo all over it.",
+            "tertiary":"It’s going pretty well. I finally got the stain out from my painting apron. Stupid Greg got red goo all over it."
          },
          {  
             "name":"Alix",
             "neutral":"Potasi-AWESOME!",
             "self":"Why are you asking? Is it because of the stains on my shirt? I promise it was only from art class the other day!",
-            "primary":"I’m really enjoying history class. However, I think the doctor might have stolen my history textbook the other day, because I saw it lying on her desk open to a pretty weird page. ",
-            "secondary":"",
-            "tertiary":""
+            "primary":"I’m really enjoying history class. However, I think Greg might have stolen my history textbook the other day, because I saw it lying on her desk open to a pretty weird page.",
+            "secondary":"I’m really enjoying history class. However, I think Bruno might have stolen my history textbook the other day, because I saw it lying on her desk open to a pretty weird page.",
+            "tertiary":"I’m really enjoying history class. However, I think Olivia might have stolen my history textbook the other day, because I saw it lying on her desk open to a pretty weird page."
          },
          {  
             "name":"Olivia",
             "neutral":" I tend to excel at whatever I do, so school is a piece of cake.",
             "self":"Everything’s great! I’m especially excelling at art right now. I’ve been practicing my penmanship too...I like writing in big, loopy letters.\n",
             "primary":"I think this class is fun, even though Bruno was being mean to me last week.",
-            "secondary":"",
-            "tertiary":""
+            "secondary":"I think this class is fun, even though Alix was being mean to me last week.",
+            "tertiary":"I think this class is fun, even though Duke was being mean to me last week."
          },
          {  
             "name":"Duke",
             "neutral":"Well, a kid disappeared yesterday, so not too well. \n",
             "self":"Well, a kid disappeared yesterday, so...pretty well. ",
-            "primary":"I find it hard to enjoy my favorite subjects when Olivia is constantly whining about how annoying everyone is. ",
-            "secondary":"",
-            "tertiary":""
+            "primary":"I find it hard to enjoy my favorite subjects when Olivia is constantly whining about how annoying everyone is.",
+            "secondary":"I find it hard to enjoy my favorite subjects when Greg is constantly whining about how annoying everyone is.",
+            "tertiary":"I find it hard to enjoy my favorite subjects when the Alix is constantly whining about how annoying everyone is."
          }
       ]
    }
