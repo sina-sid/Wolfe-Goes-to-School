@@ -318,6 +318,33 @@ public class GameLogicTree : MonoBehaviour {
 
 	}
 
+
+	public void kill(String name) {
+		foreach (Round r in rounds) {
+			foreach(character c in r.Q1.Characters) {
+				if (c.name.equals (name)) {
+					c.isAlive = false; 
+				}
+			}
+
+			foreach(character c in r.Q2.Characters) {
+				if (c.name.equals (name)) {
+					c.isAlive = false; 
+				}
+			}
+
+			foreach(character c in r.Q3.Characters) {
+				if (c.name.equals (name)) {
+					c.isAlive = false; 
+				}
+			}
+
+
+
+
+		}
+	}
+
 	
 	// Update is called once per frame
 	void Update () {
