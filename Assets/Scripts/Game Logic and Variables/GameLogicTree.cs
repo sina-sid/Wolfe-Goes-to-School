@@ -319,26 +319,28 @@ public class GameLogicTree : MonoBehaviour {
 	}
 
 
-	public void kill(String name) {
+	public void kill(string name) {
 		foreach (Round r in rounds) {
-			foreach(character c in r.Q1.Characters) {
-				if (c.name.equals (name)) {
+
+
+			for (int i = 0; i < r.Q1.Characters.Count; i++) {
+				Round.Character c = r.Q1.Characters [i]; 
+				if (c.name.Equals (name)) {
 					c.isAlive = false; 
 				}
 			}
-
-			foreach(character c in r.Q2.Characters) {
-				if (c.name.equals (name)) {
+			for (int i = 0; i < r.Q2.Characters.Count; i++) {
+				Round.Character c = r.Q2.Characters [i]; 
+				if (c.name.Equals (name)) {
 					c.isAlive = false; 
 				}
 			}
-
-			foreach(character c in r.Q3.Characters) {
-				if (c.name.equals (name)) {
+			for (int i = 0; i < r.Q3.Characters.Count; i++) {
+				Round.Character c = r.Q3.Characters [i]; 
+				if (c.name.Equals (name)) {
 					c.isAlive = false; 
 				}
 			}
-
 
 
 
