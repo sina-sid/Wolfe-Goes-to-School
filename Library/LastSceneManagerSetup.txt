@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/questionAnswerScene.unity
+- path: Assets/votingStudentScene.unity
   isLoaded: 1
   isActive: 1

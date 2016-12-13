@@ -40,13 +40,102 @@ public struct Round
 		public string primaryResponse; 
 		public string secondaryResponse; 
 		public string tertiaryResponse; 
+		public Question parent; 
 
+
+		public string getRandomResponse() {
+			int choices = 4; 
+			choices = string.IsNullOrEmpty (secondaryResponse) == true ? choices -= 1 : choices; 
+			choices = string.IsNullOrEmpty (tertiaryResponse) == true ? choices -= 1 : choices; 
+			string character1 = getCharacter (primaryResponse); 
+			string character2 = getCharacter (primaryResponse); 
+			string character3 = getCharacter (primaryResponse); 
+		
+			int randomNum = Random.Range(0,choices);
+
+			switch (randomNum)
+			{
+				case 0:
+					return neutralResponse; 
+				case 1:
+					return selfResponse; 
+				case 2:
+					if (parent.getCharacter (character1).isAlive) {
+						return primaryResponse; 
+					}
+
+					if (parent.getCharacter (character2).isAlive) {
+						return secondaryResponse; 
+					}
+
+					if (parent.getCharacter (character3).isAlive) {
+						return tertiaryResponse; 
+					}
+					return ""; 
+				case 3:
+					if (parent.getCharacter (character2).isAlive) {
+						return secondaryResponse; 
+					}
+
+					if (parent.getCharacter (character3).isAlive) {
+						return tertiaryResponse; 
+					}
+					return ""; 
+				case 4:
+					if (parent.getCharacter (character3).isAlive) {
+						return tertiaryResponse; 
+					}
+					return "";
+				default: 
+					return ""; 
+			}
+		}
+
+
+
+		public string getCharacter(string str) {
+			if (str.ToLower ().Contains ("greg")) {
+				return "greg"; 
+			}
+
+			if (str.ToLower ().Contains ("bruno")) {
+				return "bruno"; 
+			}
+
+
+			if (str.ToLower ().Contains ("alix")) {
+				return "alix"; 
+			}
+
+
+			if (str.ToLower ().Contains ("olivia")) {
+				return "olivia"; 
+			}
+
+
+			if (str.ToLower ().Contains ("duke")) {
+				return "duke"; 
+			}
+
+			return ""; 
+
+		}
 	}
+
 
 	public struct Question
 	{
 		public string title; 
 		public List<Character> Characters; 
+
+		public Character getCharacter(string name) {
+			for (int i = 0; i < Characters.Count; i++) {
+				if (Characters [i].name.ToLower ().Equals (name)) {
+									return Characters[i]; 
+				}
+			}
+			return default(Character); 
+		}
 	}
 		
 	public Question Q1; 
@@ -152,6 +241,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = ""; 
+			character.parent = q1; 
 			q1.Characters.Add (character); 
 		}
 		round1.Q1 = q1; 
@@ -168,6 +258,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = ""; 
+			character.parent = q2; 
 			q2.Characters.Add (character); 
 		}
 		round1.Q2 = q2; 
@@ -184,6 +275,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = ""; 
+			character.parent = q3; 
 			q3.Characters.Add (character); 
 		}
 		round1.Q3 = q3; 
@@ -214,6 +306,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = arr[i]["secondary"].Value; 
+			character.parent = q1; 
 			q1.Characters.Add (character); 
 		}
 		round2.Q1 = q1; 
@@ -230,6 +323,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = arr[i]["secondary"].Value; 
+			character.parent = q2; 
 			q2.Characters.Add (character); 
 		}
 		round2.Q2 = q2; 
@@ -246,6 +340,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = arr[i]["secondary"].Value; 
+			character.parent = q3; 
 			q3.Characters.Add (character); 
 		}
 		round2.Q3 = q3; 
@@ -270,6 +365,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = arr[i]["secondary"].Value; 
 			character.tertiaryResponse = arr[i]["tertiary"].Value; 
+			character.parent = q1; 
 
 			q1.Characters.Add (character); 
 		}
@@ -288,6 +384,7 @@ public class GameLogicTree : MonoBehaviour {
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = arr[i]["secondary"].Value; 
 			character.tertiaryResponse = arr[i]["tertiary"].Value; 
+			character.parent = q2; 
 			q2.Characters.Add (character); 
 		}
 		round3.Q2 = q2; 
@@ -305,16 +402,11 @@ public class GameLogicTree : MonoBehaviour {
 			character.primaryResponse = arr[i]["primary"].Value; 
 			character.secondaryResponse = arr[i]["secondary"].Value; 
 			character.tertiaryResponse = arr[i]["tertiary"].Value; 
+			character.parent = q3; 
 			q3.Characters.Add (character); 
 		}
 		round3.Q3 = q3; 
 		rounds.Add (round3); 
-
-
-
-
-
-
 
 	}
 
