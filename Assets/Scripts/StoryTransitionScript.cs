@@ -20,6 +20,12 @@ public class StoryTransitionScript : MonoBehaviour {
 		if (sceneName == "classroomStoryScene" && StoryTextUITextTypewriter.storyIntroPlayed) {
 			StoryTextUITextTypewriter.storyIntroPlayed = false;
 			StartCoroutine ("changeScene");
+		} else if (sceneName == "round1Start" && StoryTextUITextTypewriter.storyIntroPlayed) {
+			StoryTextUITextTypewriter.storyIntroPlayed = false;
+			StartCoroutine ("changeScene");
+		} else if (sceneName == "round1StartPart2" && StoryTextUITextTypewriter.storyIntroPlayed) {
+			StoryTextUITextTypewriter.storyIntroPlayed = false;
+			StartCoroutine ("changeScene");
 		}
 	}
 		
@@ -28,6 +34,10 @@ public class StoryTransitionScript : MonoBehaviour {
 		yield return new WaitForSeconds (waitTime);
 		if (sceneName == "classroomStoryScene") {
 			SceneManager.LoadScene ("votingQuestionScene");
+		} else if (sceneName == "round1Start") {
+			SceneManager.LoadScene ("round1StartPart2");
+		} else if (sceneName == "round1StartPart2") {
+			SceneManager.LoadScene ("classroomStoryScene");
 		}
 	}
 }

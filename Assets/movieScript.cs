@@ -19,7 +19,7 @@ public class movieScript : MonoBehaviour {
 		int curTime = (int)(changeAfter - Time.timeSinceLevelLoad);
 		//		Debug.Log (curTime.ToString ());
 		if (curTime <= 0) {
-			SceneManager.LoadScene ("classroomStoryScene");
+			SceneManager.LoadScene ("round1Start");
 		}
 	}
 }
