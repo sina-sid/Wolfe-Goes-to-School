@@ -8,6 +8,8 @@ public class NiceSceneTransition : MonoBehaviour {
     public static NiceSceneTransition instance;
 	private string sceneName;
 	public float changeAfter = 10;
+	public GameLogicTree logicTree;
+
 
     public float transitionTime = 1.0f;
 
@@ -21,6 +23,7 @@ public class NiceSceneTransition : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
+		logicTree = FindObjectOfType(typeof(GameLogicTree)) as GameLogicTree;
         if (instance == null) {
             DontDestroyOnLoad(transform.gameObject);
             instance = this;
@@ -83,6 +86,22 @@ public class NiceSceneTransition : MonoBehaviour {
 			SceneManager.LoadScene ("questionAnswerScene");
 		} else if (sceneName == "votingStudentScene") {
 			SceneManager.LoadScene ("studentVoteReveal");
+		} else if (sceneName == "studentVoteReveal") {
+			SceneManager.LoadScene ("RoundEnd");
+		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() -1 == 0) {
+			//if student selected is wolf
+				//play good ending
+			//else playround2start
+			//increment roundNumber
+		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() -1 == 1) {
+			//if student selected is wolf
+			//play good ending
+			//else play round3start
+			//increment roundNumber
+		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() -1 == 2) {
+			//if student selected is wolf
+			//play good ending
+			//else play bad ending
 		}
         StartCoroutine(StartScene());
     }
