@@ -213,7 +213,9 @@ public class TwitchScript : MonoBehaviour {
 		{
 		case 1:
 			scale = ((float)getQuestionVoteOf (0)) / ((float)getQuestionCountTotal ());
+			if (q1 != null) {
 				q1.transform.localScale = new Vector3 (scale, 1.0f, 1.0f);
+			}
 			break;
 		case 2:
 			scale = ((float)getQuestionVoteOf (1)) / ((float)getQuestionCountTotal ());
