@@ -148,7 +148,10 @@ public class NiceSceneTransition : MonoBehaviour {
 		} else if (sceneName == "votingQuestionScene" || sceneName == "votingStudentScene") {
 			if (curTime <= 0) {
 				StartCoroutine (EndScene ());
-			}
+			} 
+		} else if (sceneName == "studentVoteReveal" && StoryTextUITextTypewriter.storyIntroPlayed) {
+			StoryTextUITextTypewriter.storyIntroPlayed = false;
+			StartCoroutine (EndScene ());
 		}
 	}
 
