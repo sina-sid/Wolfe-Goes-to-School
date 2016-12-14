@@ -91,16 +91,12 @@
      <Compile Include="Assets\Scripts\TimerScript.cs" />
      <Compile Include="Assets\Scripts\UITextTypewriter.cs" />
      <Compile Include="Assets\Scripts\VotingTransitionScript.cs" />
-     <Compile Include="Assets\Scripts\cameraMovement.cs" />
      <Compile Include="Assets\Scripts\testTransitionScript.cs" />
      <Compile Include="Assets\TwitchScript.cs" />
      <Compile Include="Assets\movieScript.cs" />
-<<<<<<< Updated upstream
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
-=======
->>>>>>> Stashed changes
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

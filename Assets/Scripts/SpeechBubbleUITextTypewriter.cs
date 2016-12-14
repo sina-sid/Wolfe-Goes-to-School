@@ -6,7 +6,6 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 
 	Text txt;
 	public string currentResponse;
-	public static bool responsePlayed;
 	private static bool startSpeech;
 	public GameObject camera;
 	public GameObject bubble;
@@ -91,6 +90,7 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 
 
 		currentResponse = response;
+		Debug.Log (currentResponse);
 
 
 	}
@@ -99,49 +99,52 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 		camera = GameObject.Find ("Main Camera");
 		bubble = GameObject.Find ("Speech bubble");
 		scriptsObj = GameObject.Find ("Scripts"); 
-
 		needToMove = false;
-		txt = GetComponent<Text>(); // temporary! should be selected from another script that deals with the logic 
-		currentResponse = txt.text;
+		txt = GetComponent<Text>();
+
 		// txt.text = "";
 
 		// TODO: need a way to find out when the story is complete (use global bool?) and then start Coroutine
 		StartCoroutine("PlayText");
 	}
 	
-	void Awake()
-	{
-		//Debug.Log (startSpeech.GetType());
-	}
-
 	IEnumerator PlayText()
 	{
+		
 		yield return new WaitUntil(() => startSpeech);
 		yield return new WaitForSeconds(0.5f);
-		getResponse (); 
-		foreach (char c in currentResponse)
-		{
-			txt.text += c;
-			yield return new WaitForSeconds(0.03f);
+		for (int i = 0; i < 5; i++) {
+			getResponse (); 
+			foreach (char c in currentResponse) {
+				txt.text += c;
+				yield return new WaitForSeconds (0.03f);
+			}
+			//responsePlayed = true; 
+			//changeResponsePlayed();
+			//needToMove = true;
+			if (i != 4) {
+				yield return new WaitForSeconds (2f);
+				camera.transform.position += Vector3.left * 13;
+				bubble.transform.position += Vector3.left * 13;
+				txt.text = "";
+				StoryTextUITextTypewriter.storyIntroPlayed = false;
+			}
 		}
-		responsePlayed = true;
-		needToMove = true;
-		StoryTextUITextTypewriter.storyIntroPlayed = false;
 	}
 
-	IEnumerator nextCharacter() {
-		yield return new WaitForSeconds(1f);
-		camera.transform.position += Vector3.left * 10;
-		bubble.transform.position += Vector3.left * 10;
-		StartCoroutine ("PlayText"); 
+	public void clearText ()
+	{
+		StopAllCoroutines();
+		txt.text = "";
 	}
 
 	void Update ()
 	{
 		startSpeech = StoryTextUITextTypewriter.storyIntroPlayed;
-		if (responsePlayed && needToMove) {
+		if (needToMove) {
 			StartCoroutine("nextCharacter");
 			needToMove = false;
+			StartCoroutine ("PlayText"); 
 		}
 	}
 }
