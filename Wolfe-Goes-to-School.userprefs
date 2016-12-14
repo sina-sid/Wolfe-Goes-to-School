@@ -1,21 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.AttachToProcess" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game Logic and Variables/GameLogicTree.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TwitchScript.cs">
     <Files>
-      <File FileName="Assets/TwitchScript.cs" Line="8" Column="18" />
-      <File FileName="Assets/Scripts/TimerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Narrate/Scripts/NarrationManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/VotingTransitionScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Narrate/Scripts/TwitchLogin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Narrate/Scripts/PlayCommands.cs" Line="1" Column="1" />
-      <File FileName="Assets/Narrate/Scripts/TwitchIRC.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Game Logic and Variables/GameLogicTree.cs" Line="45" Column="2" />
+      <File FileName="Assets/TwitchScript.cs" Line="97" Column="19" />
+      <File FileName="Assets/Scripts/Game Logic and Variables/GameLogicTree.cs" Line="139" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Assets/TwitchPlays/Scripts/TwitchIRC.cs" line="140" column="1" />
-      <Breakpoint file="/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Assets/Scripts/Game Logic and Variables/GameLogicTree.cs" line="115" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

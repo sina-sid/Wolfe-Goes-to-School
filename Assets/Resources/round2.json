@@ -1,0 +1,122 @@
+{  
+   "Question1":{  
+      "title":"Who do you trust?",
+      "characters":[
+         {  
+            "name":"Greg",
+            "neutral":"I only trust medicine and my own intuition.",
+            "self":"Ha! I’d put my trust in a surgeon with shaky hands before I’d put my trust in one of these fools.",
+            "primary":"Everyone but that evil Alix.",
+            "secondary":"Everyone but that evil Duke."
+         },
+         {  
+            "name":"bruno",
+            "neutral":"I trust in my sick painting skills. That’s about it. These other kids can’t even paint stick figures",
+            "self":"Honestly no one. I can only truly trust myself!",
+            "primary":"Hmm..if I had to pick someone, I guess I’d say Greg...at least he’s not a jerk like Duke.",
+            "secondary":"Hmm..if I had to pick someone, I guess I’d say Greg...at least he’s not all uptight like Olivia."
+         },
+         {  
+            "name":"Alix",
+            "neutral":"I trust the institution of science. And maybe Olivia. That is all.",
+            "self":"who do you trust???",
+            "primary":"I trust Olivia, I suppose, and definitely NOT Greg, that kid is always sharpening his surgical tools and acting creepy.",
+            "secondary":"I trust Olivia, I suppose, and definitely NOT Bruno, that kid is always drawing creepy death scenes in his notebook."
+         },
+         {  
+            "name":"Olivia",
+            "neutral":"I trust no one. ",
+            "self":"I only trust the law… and my history textbook.",
+            "primary":"Well, every subject is important...but don’t let Bruno know I said that. That kid’s the worst.",
+            "secondary":"Well, every subject is important...but don’t let Alix know I said that. That kid’s the worst."
+         },
+         {  
+            "name":"Duke",
+            "neutral":"Does PE count?. ",
+            "self":"School is for nerds!!! If I had to choose something though, I guess it’d be history. Because wars are cool.",
+            "primary":" Eh, I don’t know. The worst subject is probably history though.",
+            "secondary":"Eh, I don’t know. The worst subject is probably biology though."
+         }
+      ]
+   },
+   "Question2":{  
+      "title":"What are your plans for after school?",
+      "characters":[  
+         {  
+            "name":"Greg",
+            "neutral":"Well, I accidentally swallowed some food coloring earlier today, and I feel like I’m dying, so I’ll probably give myself a medical exam.",
+            "self":" Oh...not much...probably just going to eat some...food.",
+            "primary":"I have a playdate with Alix, but she cancelled last minute for some really shady reason.",
+            "secondary":"I have a playdate with Duke, but he cancelled last minute for some really shady reason."
+         },
+         {  
+            "name":"Bruno",
+            "neutral":"My mom and I are going to take turns cowering in fear in the corner of the room.",
+            "self":"I dunno, probably work on some sketches. I got a new red paintbrush yesterday.",
+            "primary":"Well, I was gonna hang out with Duke, but he said he was busy.",
+            "secondary":"Well, I was gonna hang out with Olivia, but she said she was busy."
+         },
+         {  
+            "name":"Alix",
+            "neutral":"Hanging out with all my friends...the lab rats I’m experimenting on this week.",
+            "self":"I’ll be in the lab all day reading my history textbook. I don’t want to deal with all of these ridiculous wolf shenanigans. ",
+            "primary":"Well, I’m definitely not hanging out with Greg...he seems like a pretty sketchy character.",
+            "secondary":"Well, I’m definitely not hanging out with Bruno...he seems like a pretty sketchy character."
+         },
+         {  
+            "name":"Olivia",
+            "neutral":"Rushing home to watch an episode of Law & Order.",
+            "self":"Finishing my history homework, obviously. What’s it to ya?",
+            "primary":"Finishing my history homework, obviously. What’s it to ya? Did that crazy Bruno put you up to it? He’s always had it out for me.",
+            "secondary":"Finishing my history homework, obviously. What’s it to ya? Did that crazy Bruno put you up to it? He’s always had it out for me."
+         },
+         {  
+            "name":"Duke",
+            "neutral":"Just gonna toss around the ol’ pigskin with my pops!",
+            "self":"Uh, I don’t know….uh, definitely NOT killing children...",
+            "primary":"I have practice until late tonight, but I heard that Olvia is up to something suspicious….",
+            "secondary":"I have practice until late tonight, but I heard that Greg is up to something suspicious…."
+         }
+      ]
+   },
+   "Question3":{  
+      "title":"What’s your favorite subject in school?",
+      "characters":[  
+         {  
+            "name":"Greg",
+            "neutral":"I like to study myself, mostly. It’s a good thing my stethoscope is so reflective!",
+            "self":"History!",
+            "primary":"I hate history, that stupid Alix is always bragging to me about how well she does on all the tests.",
+            "secondary":"I hate history, that stupid Duke is always bragging to me about how well he does on all the tests."
+         },
+         {  
+            "name":"Bruno",
+            "neutral":"The only subject that matters!! Art, obviously.",
+            "self":"Is that even a real question? You’ve got to be kidding me.",
+            "primary":"Hmm...that’s a tough one...I’ll go with PE. Just kidding!! Exercising is gross. Obviously, art is my favorite subject.",
+            "secondary":"Anything but history, uhg. How boring."
+         },
+         {  
+            "name":"Alix",
+            "neutral":"Biology, duh.",
+            "self":"I have a periodic table comforter and matching pillowcase. Does that answer your question?",
+            "primary":"I stick to science classes obviously, unlike that crazy Greg who likes just about anything - even history! How boring.",
+            "secondary":"I stick to science classes obviously, unlike that crazy Greg who likes just about anything - even history! How boring."
+         },
+         {  
+            "name":"Olivia",
+            "neutral":"I love reading about all the wars in history class!",
+            "self":"History, obviously. Even though the teacher doesn’t exactly teach it very well.",
+            "primary":"I personally love history, however, Bruno hates it when I talk about how much I enjoy it.",
+            "secondary":"I personally love history, however, Alix hates it when I talk about how much I enjoy it."
+         },
+         {  
+            "name":"Duke",
+            "neutral":"P.E.",
+            "self":"Does tetherball count?",
+            "primary":"Does beating up Olivia count? HAA",
+            "secondary":"Does beating up Greg count? HAA"
+         }
+      ]
+   }
+}

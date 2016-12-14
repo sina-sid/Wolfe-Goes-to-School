@@ -11,8 +11,28 @@ public class TwitchScript : MonoBehaviour {
 	public Hashtable votes; 
 	public Hashtable questionChoice; 
 
+
+
+	public GameObject row1;
+	public GameObject row2;
+	public GameObject row3;
+	public GameObject row4;
+	public GameObject row5;
+
+
+
+
+
 	// Use this for initialization
 	void Start () {
+
+		row1 = GameObject.Find("greg_block");
+		row2 = GameObject.Find("bruno_block");
+		row3 = GameObject.Find("alix_block");
+		row4 = GameObject.Find("olivia_block");
+		row5 = GameObject.Find("duke_block");
+
+	
 
 
 
@@ -109,13 +129,73 @@ public class TwitchScript : MonoBehaviour {
 		
 	public void Vote(string username, int choice)
 	{
-		votes.Add (username, choice); 
+
+
+		if (votes.ContainsKey (username)) {
+			votes [username] = choice; 
+		} else {
+			votes.Add (username, choice); 
+		}
+
+
+
+
+
+
+
+		Debug.Log (username + " voted " + choice); 
+		float scale = 0.0f; 
+
+		switch (choice)
+		{
+		case 0:
+			scale = ((float)getVoteOf (0)) / ((float)getVotesTotal ());
+			row1.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			break;
+		case 1:
+			scale = ((float)getVoteOf (1)) / ((float)getVotesTotal ());
+			row2.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			break;
+		case 2:
+			scale = ((float)getVoteOf (2)) / ((float)getVotesTotal ());
+			row3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			break;
+		case 3:
+			scale = ((float)getVoteOf (3)) / ((float)getVotesTotal ());
+			row4.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			break;
+		case 4:
+			scale = ((float)getVoteOf(4))/((float)getVotesTotal());
+			row5.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			break;
+		
+		}
 	}
 
 	public void Question(string username, int choice) {
-		questionChoice.Add (username, choice); 
+		if (questionChoice.ContainsKey (username)) {
+			questionChoice [username] = choice; 
+		} else {
+			questionChoice.Add (username, choice); 
+		}
 	}
 
+
+
+	public int getVoteOf(int choice) {
+		int count = 0; 
+		foreach (string key in votes.Keys) {
+			int val = (int)votes[key];
+			if (val == choice) {
+				count++; 
+			}
+		}
+		return count; 
+	}
+
+	public int getVotesTotal() {
+		return votes.Keys.Count; 
+	}
 
 
 	public void convertMsg(string str) {
