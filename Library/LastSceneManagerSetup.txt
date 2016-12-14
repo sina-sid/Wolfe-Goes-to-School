@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/votingQuestionScene.unity
+=======
+<<<<<<< Updated upstream
+- path: Assets/questionAnswerScene.unity
+=======
+- path: Assets/RoundEnd.unity
+>>>>>>> Stashed changes
+>>>>>>> 680df6c60e469408f04773f541f441aaea56835b
   isLoaded: 1
   isActive: 1
