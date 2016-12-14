@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{672777F2-D9CB-3BC8-193C-EF0E5570C180}</ProjectGuid>
+    <ProjectGuid>{532E12C5-7808-D2F1-785C-55BB465D9826}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,7 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EmptyClass.cs" />
      <Compile Include="Assets\Narrate\Demos\2DDemo\Scripts\Elevator.cs" />
      <Compile Include="Assets\Narrate\Demos\2DDemo\Scripts\Generator.cs" />
      <Compile Include="Assets\Narrate\Demos\2DDemo\Scripts\GeneratorManager.cs" />
