@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/questionAnswerScene.unity
+=======
+- path: Assets/RoundEnd.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
