@@ -164,32 +164,32 @@ public class TwitchScript : MonoBehaviour {
 		case 0:
 			scale = ((float)getVoteOf (0)) / ((float)getVotesTotal ());
 			if (row1 != null) {
-				row1.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+				row1.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
 			}
 
 			break;
 		case 1:
 			scale = ((float)getVoteOf (1)) / ((float)getVotesTotal ());
 			if (row2 != null) {
-				row2.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+				row2.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
 			}
 			break;
 		case 2:
 			scale = ((float)getVoteOf (2)) / ((float)getVotesTotal ());
 			if (row3 != null) {
-				row3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+				row3.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
 			}
 			break;
 		case 3:
 			scale = ((float)getVoteOf (3)) / ((float)getVotesTotal ());
 			if (row4 != null) {
-				row4.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+				row4.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
 			}
 			break;
 		case 4:
 			scale = ((float)getVoteOf (4)) / ((float)getVotesTotal ());
 			if (row5 != null) {
-				row5.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+				row5.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
 			}
 			break;
 		}
