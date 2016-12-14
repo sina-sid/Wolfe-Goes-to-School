@@ -177,56 +177,49 @@ public class TwitchScript : MonoBehaviour {
 		Debug.Log (username + " voted " + choice); 
 		float scale = 0.0f; 
 
-		switch (choice)
-		{
-		case 0:
-			scale = ((float)getVoteOf (0)) / ((float)getVotesTotal ());
-			if (row1 != null) {
-				row1.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
-			}
-
-			break;
-		case 1:
-			scale = ((float)getVoteOf (1)) / ((float)getVotesTotal ());
-			if (row2 != null) {
-				row2.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
-			}
-			break;
-		case 2:
-			scale = ((float)getVoteOf (2)) / ((float)getVotesTotal ());
-			if (row3 != null) {
-				row3.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
-			}
-			break;
-		case 3:
-			scale = ((float)getVoteOf (3)) / ((float)getVotesTotal ());
-			if (row4 != null) {
-				row4.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
-			}
-			break;
-		case 4:
-			scale = ((float)getVoteOf (4)) / ((float)getVotesTotal ());
-			if (row5 != null) {
-				row5.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
-			}
-			break;
-		}
+		updateVotes (); 
 	}
 
 
-	public void Question(string username, int choice) {
-		if (questionChoice.ContainsKey (username)) {
-			questionChoice [username] = choice; 
-		} else {
-			questionChoice.Add (username, choice); 
-		}
 
-
-
-		Debug.Log (username + " voted " + choice); 
+	void updateVotes() {
 
 		float scale = 0.0f; 
 
+		scale = ((float)getVoteOf (0)) / ((float)getVotesTotal ());
+		if (row1 != null) {
+			row1.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
+		}
+
+		scale = ((float)getVoteOf (1)) / ((float)getVotesTotal ());
+		if (row2 != null) {
+			row2.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
+		}
+
+
+		scale = ((float)getVoteOf (2)) / ((float)getVotesTotal ());
+		if (row3 != null) {
+			row3.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
+		}
+
+		scale = ((float)getVoteOf (3)) / ((float)getVotesTotal ());
+		if (row4 != null) {
+			row4.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
+		}
+
+
+		scale = ((float)getVoteOf (4)) / ((float)getVotesTotal ());
+		if (row5 != null) {
+			row5.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
+		}
+
+	}
+
+
+	void updateQuestionVotes() {
+		float scale = 0.0f; 
+
+<<<<<<< HEAD
 		switch (choice)
 		{
 		case 0:
@@ -249,8 +242,38 @@ public class TwitchScript : MonoBehaviour {
 				q3.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
 			}
 			break;
+=======
+		scale = ((float)getQuestionVoteOf (2)) / ((float)getQuestionCountTotal ());
+		if (q3 != null) {
+			q3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
 		}
 
+		scale = ((float)getQuestionVoteOf (1)) / ((float)getQuestionCountTotal ());
+
+		if (q2 != null) {
+
+			q2.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+		}
+
+
+		scale = ((float)getQuestionVoteOf (0)) / ((float)getQuestionCountTotal ());
+		if (q1 != null) {
+			q1.transform.localScale = new Vector3 (scale, 1.0f, 1.0f);
+		}
+	}
+
+
+	public void Question(string username, int choice) {
+		if (questionChoice.ContainsKey (username)) {
+			questionChoice [username] = choice; 
+		} else {
+			questionChoice.Add (username, choice); 
+>>>>>>> b3a30f2a7f040bb55a59d9b5ed13d24d661c0780
+		}
+
+
+
+		updateQuestionVotes (); 
 
 
 
@@ -295,11 +318,13 @@ public class TwitchScript : MonoBehaviour {
 	public void convertMsg(string str) {
 
 
+		Debug.Log (str); 
+
 
 		//Remove non-command parts of message (like username)
 		int msgIndex = str.IndexOf("PRIVMSG #");
 		string msgSubStr = str.Substring(msgIndex + 9);
-		string username = msgSubStr.Substring (0, msgSubStr.IndexOf (" "));
+		string username = str.Substring (1, (str.IndexOf ("!") - 1) ); 
 
 
 
