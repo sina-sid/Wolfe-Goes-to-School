@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class movieScript : MonoBehaviour {
 
 	public float changeAfter = 16;
+	public MovieTexture movie;
 
 	// Use this for initialization
 	void Start () {
-		((MovieTexture)GetComponent<Renderer>().material.mainTexture).Play();
+		GetComponent<RawImage> ().texture = movie as MovieTexture;
+		movie.Play ();
 	}
 	
 	// Update is called once per frame
