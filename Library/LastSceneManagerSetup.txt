@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/studentVoteReveal.unity
+- path: Assets/RoundEnd.unity
   isLoaded: 1
   isActive: 1

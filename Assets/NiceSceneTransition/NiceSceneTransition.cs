@@ -43,7 +43,7 @@ public class NiceSceneTransition : MonoBehaviour {
         StartCoroutine(EndScene(level));
     }
 
-    IEnumerator StartScene()
+    public IEnumerator StartScene()
     {
         time = 1.0f;
         yield return null;
@@ -56,7 +56,7 @@ public class NiceSceneTransition : MonoBehaviour {
         fadeImg.gameObject.SetActive(false);
     }
 
-    IEnumerator EndScene(string nextScene)
+    public IEnumerator EndScene(string nextScene)
     {
         fadeImg.gameObject.SetActive(true);
         time = 0.0f;
