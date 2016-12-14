@@ -27,7 +27,7 @@ public class VotingTransitionScript : MonoBehaviour {
 		if (sceneName == "votingQuestionScene") {
 			SceneManager.LoadScene ("questionAnswerScene");
 		} else if (sceneName == "votingStudentScene") {
-			SceneManager.LoadScene ("classroomStoryScene");
+			SceneManager.LoadScene ("studentVoteReveal");
 		}
 	}
 

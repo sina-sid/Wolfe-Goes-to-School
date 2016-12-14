@@ -2,14 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.AttachToProcess" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StoryTextUITextTypewriter.cs">
     <Files>
-      <File FileName="Assets\TwitchScript.cs" Line="167" Column="57" />
+      <File FileName="Assets\TwitchScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Game Logic and Variables\GameLogicTree.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\StoryTextUITextTypewriter.cs" Line="52" Column="14" />
-      <File FileName="Assets\movieScript.cs" Line="22" Column="40" />
-      <File FileName="Assets\Scripts\StoryTransitionScript.cs" Line="14" Column="26" />
+      <File FileName="Assets\Scripts\StoryTextUITextTypewriter.cs" Line="65" Column="2" />
+      <File FileName="Assets\movieScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryTransitionScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\testTransitionScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\VotingTransitionScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" Line="22" Column="72" />
+      <File FileName="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UITextTypewriter.cs" Line="1" Column="1" />
       <File FileName="Assets\changeRound.cs" Line="1" Column="1" />
     </Files>
