@@ -219,30 +219,6 @@ public class TwitchScript : MonoBehaviour {
 	void updateQuestionVotes() {
 		float scale = 0.0f; 
 
-<<<<<<< HEAD
-		switch (choice)
-		{
-		case 0:
-			scale = ((float)getQuestionVoteOf (0)) / ((float)getQuestionCountTotal ());
-			if (q1 != null) {
-				q1.transform.localScale = new Vector3 (scale, 0.67f, 1.0f);
-			}
-			break;
-		case 1:
-			scale = ((float)getQuestionVoteOf (1)) / ((float)getQuestionCountTotal ());
-
-			if (q2 != null) {
-				
-				q2.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
-			}
-			break;
-		case 2:
-			scale = ((float)getQuestionVoteOf (2)) / ((float)getQuestionCountTotal ());
-			if (q3 != null) {
-				q3.transform.localScale = new Vector3(scale, 0.67f, 1.0f);
-			}
-			break;
-=======
 		scale = ((float)getQuestionVoteOf (2)) / ((float)getQuestionCountTotal ());
 		if (q3 != null) {
 			q3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
@@ -268,11 +244,9 @@ public class TwitchScript : MonoBehaviour {
 			questionChoice [username] = choice; 
 		} else {
 			questionChoice.Add (username, choice); 
->>>>>>> b3a30f2a7f040bb55a59d9b5ed13d24d661c0780
 		}
 
-
-
+	
 		updateQuestionVotes (); 
 
 
