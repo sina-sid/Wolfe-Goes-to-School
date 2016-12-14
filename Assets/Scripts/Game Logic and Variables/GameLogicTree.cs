@@ -225,6 +225,22 @@ public class GameLogicTree : MonoBehaviour {
 	}
 
 
+	public int getNumAlive() {
+
+
+		int count = 0; 
+		foreach (Character C in rounds[0].Q1.Characters) {
+			if (C.isAlive) {
+				count++;  
+			}
+		}
+
+		return count; 
+
+
+
+	}
+
 
 	void parseRounds() {
 
