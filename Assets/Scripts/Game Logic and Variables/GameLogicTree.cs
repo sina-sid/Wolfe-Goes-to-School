@@ -47,9 +47,9 @@ public struct Round
 			int choices = 4; 
 			choices = string.IsNullOrEmpty (secondaryResponse) == true ? choices -= 1 : choices; 
 			choices = string.IsNullOrEmpty (tertiaryResponse) == true ? choices -= 1 : choices; 
-			string character1 = getCharacter (primaryResponse); 
-			string character2 = getCharacter (primaryResponse); 
-			string character3 = getCharacter (primaryResponse); 
+			string character1 = getBlameCharacter (primaryResponse); 
+			string character2 = getBlameCharacter (primaryResponse); 
+			string character3 = getBlameCharacter (primaryResponse); 
 		
 			int randomNum = Random.Range(0,choices);
 
@@ -92,8 +92,8 @@ public struct Round
 		}
 
 
-
-		public string getCharacter(string str) {
+		//parses string to see character to blame
+		public string getBlameCharacter(string str) {
 			if (str.ToLower ().Contains ("greg")) {
 				return "greg"; 
 			}
@@ -174,6 +174,9 @@ public class GameLogicTree : MonoBehaviour {
 	public Dictionary<int, string> question3;
 
 
+
+
+
 	public List<Round> rounds; 
 
 	// Use this for initialization
@@ -218,14 +221,27 @@ public class GameLogicTree : MonoBehaviour {
 
 
 
+	public int getRoundNumber() {
+		return roundNumber; 
+	}
+
+	public void setRoundNumber(int n) {
+		roundNumber = n; 
+	}
+
+
+
 	void parseRounds() {
 
 
 		rounds = new List<Round> (); 
 
+		roundNumber = 0; 
+
 		TextAsset r1 = Resources.Load("round1") as TextAsset; 
 		var N = JSON.Parse(r1.text);
 		Round round1 = new Round(); 
+
 
 
 
@@ -287,13 +303,6 @@ public class GameLogicTree : MonoBehaviour {
 		Round round2 = new Round (); 
 		TextAsset r2Txt = Resources.Load("round2") as TextAsset; 
 		var parsedR2 = JSON.Parse(r2Txt.text);
-
-
-
-
-
-
-
 
 		q1 = new Round.Question(); 
 		q1.title = parsedR2 ["Question1"] ["title"].Value; 
