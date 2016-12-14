@@ -51,7 +51,9 @@ public class StoryTextUITextTypewriter : MonoBehaviour
 			story = "You know one of your students is actually a wolf in disguise and today you plan to ask them questions and decide who you think is the wolf. If you choose wrong, the wolf lives another day and you get another chance to investigate. If you choose right, you can sleep better tonight knowing that your students and your town are safe once again. Good luck!";
 		} 
 		else if (sceneName == "studentVoteReveal") {
-			story = "You chose " + twitch.votesWinner () + ". Your other students drag them to the tetherball court to teach them a lesson.";
+			string voteWinner = twitch.votesWinner (); 
+			logicTree.kill (voteWinner); 
+			story = "You chose " + voteWinner + ". Your other students drag them to the tetherball court to teach them a lesson.";
 		} 
 		else {
 			story = txt.text;

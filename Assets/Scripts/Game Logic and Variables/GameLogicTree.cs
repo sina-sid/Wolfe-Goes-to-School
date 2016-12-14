@@ -178,6 +178,9 @@ public class GameLogicTree : MonoBehaviour {
 	public Dictionary<int, string> question3;
 
 
+	public bool isWolfKilled = false; 
+
+
 	public List<Round> rounds; 
 
 	// Use this for initialization
@@ -209,7 +212,7 @@ public class GameLogicTree : MonoBehaviour {
 
 
 	void awake() {
-		DontDestroyOnLoad (this.gameObject); 
+		DontDestroyOnLoad (transform.gameObject); 
 	}
 
 
@@ -257,15 +260,26 @@ public class GameLogicTree : MonoBehaviour {
 
 
 
+
+
 		Question q1 = new Question(); 
 		q1.title = N ["Question1"] ["title"].Value; 
 		JSONArray arr = N["Question1"]["characters"].AsArray;
 		q1.Characters = new List<Character> (); 
+
+//		int randNum = Random.Range (0, arr.Count); 
+		int randNum = 1; 
+
 		for (int i = 0; i < arr.Count; i++) {
 			Character character = new Character ();  
 			character.name = arr[i]["name"].Value; 
 			character.isResponsePlayed = false;
 			character.isAlive = true; 
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
 			character.primaryResponse = arr[i]["primary"].Value; 
@@ -284,6 +298,11 @@ public class GameLogicTree : MonoBehaviour {
 			Character character = new Character ();
 			character.isResponsePlayed = false;
 			character.isAlive = true; 
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
@@ -303,6 +322,11 @@ public class GameLogicTree : MonoBehaviour {
 			Character character = new Character ();  
 			character.isResponsePlayed = false;
 			character.isAlive = true; 
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
@@ -329,6 +353,11 @@ public class GameLogicTree : MonoBehaviour {
 			Character character = new Character ();  
 			character.isResponsePlayed = false;
 			character.isAlive = true; 
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
@@ -348,6 +377,11 @@ public class GameLogicTree : MonoBehaviour {
 			Character character = new Character ();  
 			character.isResponsePlayed = false;
 			character.isAlive = true; 
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
@@ -366,6 +400,11 @@ public class GameLogicTree : MonoBehaviour {
 		for (int i = 0; i < arr.Count; i++) {
 			Character character = new Character (); 
 			character.isResponsePlayed = false;
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.isAlive = true; 
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
@@ -393,6 +432,11 @@ public class GameLogicTree : MonoBehaviour {
 			Character character = new Character ();  
 			character.isResponsePlayed = false;
 			character.isAlive = true; 
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
@@ -414,6 +458,11 @@ public class GameLogicTree : MonoBehaviour {
 			Character character = new Character ();  
 			character.isResponsePlayed = false;
 			character.isAlive = true; 
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
 			character.selfResponse = arr[i]["self"].Value; 
@@ -433,6 +482,11 @@ public class GameLogicTree : MonoBehaviour {
 		for (int i = 0; i < arr.Count; i++) {
 			Character character = new Character ();  
 			character.isResponsePlayed = false;
+			if (i == randNum) {
+				character.isWolf = true; 
+			} else {
+				character.isWolf = false;
+			}
 			character.isAlive = true; 
 			character.name = arr[i]["name"].Value; 
 			character.neutralResponse = arr[i]["neutral"].Value; 
@@ -454,18 +508,28 @@ public class GameLogicTree : MonoBehaviour {
 			for (int i = 0; i < r.Q1.Characters.Count; i++) {
 				Character c = r.Q1.Characters [i]; 
 				if (c.name.Equals (name)) {
+					if (c.isWolf) {
+						this.isWolfKilled = true; 
+					}
 					c.isAlive = false; 
 				}
+
 			}
 			for (int i = 0; i < r.Q2.Characters.Count; i++) {
 				Character c = r.Q2.Characters [i]; 
 				if (c.name.Equals (name)) {
+					if (c.isWolf) {
+						this.isWolfKilled = true; 
+					}
 					c.isAlive = false; 
 				}
 			}
 			for (int i = 0; i < r.Q3.Characters.Count; i++) {
 				Character c = r.Q3.Characters [i]; 
 				if (c.name.Equals (name)) {
+					if (c.isWolf) {
+						this.isWolfKilled = true; 
+					}
 					c.isAlive = false; 
 				}
 			}
