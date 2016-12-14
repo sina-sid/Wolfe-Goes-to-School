@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\cameraMovement.cs" />
      <Compile Include="Assets\Scripts\testTransitionScript.cs" />
      <Compile Include="Assets\TwitchScript.cs" />
+     <Compile Include="Assets\movieScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
