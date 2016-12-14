@@ -30,4 +30,12 @@ public class VotingTransitionScript : MonoBehaviour {
 			SceneManager.LoadScene ("classroomStoryScene");
 		}
 	}
+
+
+
+
+
+
+
+
 }
