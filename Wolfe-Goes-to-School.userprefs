@@ -1,22 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.AttachToProcess" />
-<<<<<<< Updated upstream
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TwitchScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TwitchScript.cs">
     <Files>
-      <File FileName="Assets/TwitchScript.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NiceSceneTransition\NiceSceneTransition.cs">
-    <Files>
-      <File FileName="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" Line="36" Column="54" />
-      <File FileName="Assets\movieScript.cs" Line="30" Column="9" />
-      <File FileName="Assets\NiceSceneTransition\NiceSceneTransition.cs" Line="92" Column="31" />
->>>>>>> Stashed changes
+      <File FileName="Assets\TwitchScript.cs" Line="249" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/jayanthprathipati/Development/Wolfe-Goes-to-School/Assets/TwitchPlays/Scripts/TwitchIRC.cs" line="140" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
