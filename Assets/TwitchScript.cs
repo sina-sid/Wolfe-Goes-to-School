@@ -43,9 +43,9 @@ public class TwitchScript : MonoBehaviour {
 		row5 = GameObject.Find("duke_block");
 
 
-		q1 = GameObject.Find ("q1_block"); 
-		q2 = GameObject.Find ("q2_block"); 
-		q3 = GameObject.Find ("q3_block"); 
+		q1 = GameObject.Find ("q0_block"); 
+		q2 = GameObject.Find ("q1_block"); 
+		q3 = GameObject.Find ("q2_block"); 
 	
 
 		IRC = this.GetComponent<TwitchIRC>();
@@ -211,19 +211,21 @@ public class TwitchScript : MonoBehaviour {
 
 		switch (choice)
 		{
-		case 1:
+		case 0:
 			scale = ((float)getQuestionVoteOf (0)) / ((float)getQuestionCountTotal ());
 			if (q1 != null) {
 				q1.transform.localScale = new Vector3 (scale, 1.0f, 1.0f);
 			}
 			break;
-		case 2:
+		case 1:
 			scale = ((float)getQuestionVoteOf (1)) / ((float)getQuestionCountTotal ());
+
 			if (q2 != null) {
+				
 				q2.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
 			}
 			break;
-		case 3:
+		case 2:
 			scale = ((float)getQuestionVoteOf (2)) / ((float)getQuestionCountTotal ());
 			if (q3 != null) {
 				q3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
