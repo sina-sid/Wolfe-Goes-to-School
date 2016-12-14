@@ -93,15 +93,38 @@ public class NiceSceneTransition : MonoBehaviour {
 				//play good ending
 			//else playround2start
 			//increment roundNumber
+			if (logicTree.isWolfKilled) {
+			} else {
+				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
+			}
+
+
+
+
+
+
+
+
 		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 1) {
 			//if student selected is wolf
 			//play good ending
 			//else play round3start
 			//increment roundNumber
+			if (logicTree.isWolfKilled) {
+			} else {
+				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
+			}
+
+
 		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 2) {
 			//if student selected is wolf
 			//play good ending
 			//else play bad ending
+
+			if (logicTree.isWolfKilled) {
+			} else {
+				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
+			}
 		}
         StartCoroutine(StartScene());
     }
