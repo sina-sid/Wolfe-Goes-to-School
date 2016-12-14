@@ -76,6 +76,20 @@ public class NiceSceneTransition : MonoBehaviour {
             time += Time.deltaTime * (1.0f/transitionTime);
             yield return null;
         }
+
+
+		Debug.Log ("THIS RUNS " + logicTree.getRoundNumber ()); 
+		Debug.Log("HELLO ROUND " + sceneName); 
+
+
+		if (logicTree.isWolfKilled) {
+			Debug.Log ("HELLO KILL"); 
+		} else {
+			Debug.Log ("HELLO NEXT"); 
+		}
+
+
+
 		if (sceneName == "classroomStoryScene") {
 			SceneManager.LoadScene ("votingQuestionScene");
 		} else if (sceneName == "round1Start") {
@@ -92,9 +106,12 @@ public class NiceSceneTransition : MonoBehaviour {
 			//if student selected is wolf
 				//play good ending
 			//else playround2start
+
 			//increment roundNumber
 			if (logicTree.isWolfKilled) {
+				Debug.Log ("HELLO KILL"); 
 			} else {
+				Debug.Log ("HELLO NEXT"); 
 				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
 			}
 
