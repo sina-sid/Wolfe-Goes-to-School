@@ -10,60 +10,99 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 	private static bool startSpeech;
 	public GameObject camera;
 	public GameObject bubble;
+	public GameLogicTree logicTree; 
 	bool needToMove;
 	int roundNumber;
 	int questionNumber;
+	int counter = 0; 
+
+	public GameObject scriptsObj; 
 
 	void getResponse() {
+
+		logicTree = FindObjectOfType(typeof(GameLogicTree)) as GameLogicTree;
+
 		string response = "NO RESPONSE SELECTED";
+
+		Debug.Log ("Question num: " + questionNumber); 
+
+
+
+
+	
+
+
 		if (questionNumber == 1) {
-			if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Greg").isResponsePlayed) {
-				response = GameLogicTree.Instance.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Greg").getRandomResponse ();
-			} else if (!GameLogicTree.Instance.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Bruno").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Bruno").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Alix").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Alix").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Olivia").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Olivia").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Duke").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q1.getCharacter ("Duke").getRandomResponse ();
+			if (!logicTree.rounds [logicTree.getRoundNumber ()].Q1.getCharacter ("Greg").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Greg").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Greg").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Bruno").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Bruno").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Bruno").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Alix").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Alix").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Alix").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Olivia").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Olivia").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Olivia").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Duke").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Duke").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Duke").isResponsePlayed = true; 
 			}
 		} else if (questionNumber == 2) {
-			if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Greg").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Greg").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Bruno").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Bruno").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Alix").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Alix").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Olivia").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Olivia").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Duke").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q2.getCharacter ("Duke").getRandomResponse ();
+			if (!logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Greg").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Greg").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Greg").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Bruno").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Bruno").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Bruno").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Alix").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Alix").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Alix").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Olivia").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Olivia").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Olivia").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Duke").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Duke").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Duke").isResponsePlayed = true; 
 			}
 		} else {
-			if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Greg").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Greg").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Bruno").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Bruno").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Alix").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Alix").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Olivia").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Olivia").getRandomResponse ();
-			} else if (!GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Duke").isResponsePlayed) {
-				response = GameLogicTree.rounds [GameLogicTree.getRoundNumber () - 1].Q3.getCharacter ("Duke").getRandomResponse ();
+			if (!logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Greg").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Greg").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Greg").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Bruno").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Bruno").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber ()].Q3.getCharacter ("Bruno").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Alix").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Alix").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber ()].Q3.getCharacter ("Alix").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Olivia").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Olivia").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber ()].Q3.getCharacter ("Olivia").isResponsePlayed = true; 
+			} else if (!logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Duke").isResponsePlayed) {
+				response = logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Duke").getRandomResponse ();
+				logicTree.rounds [logicTree.getRoundNumber () ].Q3.getCharacter ("Duke").isResponsePlayed = true; 
 			}
 		}
+
+
+
+
+
+
 		currentResponse = response;
+
+
 	}
 
 	void Start() {
 		camera = GameObject.Find ("Main Camera");
 		bubble = GameObject.Find ("Speech bubble");
-//		roundNumber = GameLogicTree.getRoundNumber ();
-//		questionNumber = TwitchScript.questionWinner ();
+		scriptsObj = GameObject.Find ("Scripts"); 
+
 		needToMove = false;
 		txt = GetComponent<Text>(); // temporary! should be selected from another script that deals with the logic 
-//		response = txt.text;
+		currentResponse = txt.text;
 		// txt.text = "";
 
 		// TODO: need a way to find out when the story is complete (use global bool?) and then start Coroutine
@@ -79,6 +118,7 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 	{
 		yield return new WaitUntil(() => startSpeech);
 		yield return new WaitForSeconds(0.5f);
+		getResponse (); 
 		foreach (char c in currentResponse)
 		{
 			txt.text += c;
@@ -93,6 +133,7 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		camera.transform.position += Vector3.left * 10;
 		bubble.transform.position += Vector3.left * 10;
+		StartCoroutine ("PlayText"); 
 	}
 
 	void Update ()

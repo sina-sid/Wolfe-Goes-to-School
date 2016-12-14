@@ -31,12 +31,7 @@ public class TwitchScript : MonoBehaviour {
 		row3 = GameObject.Find("alix_block");
 		row4 = GameObject.Find("olivia_block");
 		row5 = GameObject.Find("duke_block");
-
 	
-
-
-
-
 
 		IRC = this.GetComponent<TwitchIRC>();
 		votes = new Hashtable();
@@ -74,6 +69,8 @@ public class TwitchScript : MonoBehaviour {
 
 	//return 
 	public int questionWinner() {
+		
+
 		Hashtable choiceHash = new Hashtable ();  
 		int max = -1; 
 		foreach (string key in questionChoice.Keys) {
