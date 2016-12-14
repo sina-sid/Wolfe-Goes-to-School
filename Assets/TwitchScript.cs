@@ -172,6 +172,7 @@ public class TwitchScript : MonoBehaviour {
 		}
 	}
 
+
 	public void Question(string username, int choice) {
 		if (questionChoice.ContainsKey (username)) {
 			questionChoice [username] = choice; 

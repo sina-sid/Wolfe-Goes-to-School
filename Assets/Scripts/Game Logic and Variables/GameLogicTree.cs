@@ -174,6 +174,13 @@ public class GameLogicTree : MonoBehaviour {
 	public Dictionary<int, string> question3;
 
 
+	private static GameLogicTree instance = null;
+	public static GameLogicTree Instance { get { return instance; } }
+
+	void Awake() {
+		instance = this;
+	}
+
 
 
 
@@ -215,9 +222,6 @@ public class GameLogicTree : MonoBehaviour {
 	}
 
 
-	//void checkIfStreamerAlive() {
-	//
-	//}
 
 
 
