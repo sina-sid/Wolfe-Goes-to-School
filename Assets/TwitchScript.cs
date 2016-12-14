@@ -102,7 +102,7 @@ public class TwitchScript : MonoBehaviour {
 		foreach (int key in choiceHash.Keys) {
 			int val = (int)choiceHash[key];
 			if (val > max) {
-				max = val; 
+				max = key; 
 			}
 		}
 		questionChoice.Clear (); 
@@ -128,10 +128,13 @@ public class TwitchScript : MonoBehaviour {
 		foreach (int key in choiceHash.Keys) {
 			int val = (int)choiceHash[key];
 			if (val > max) {
-				max = val; 
+				max = key; 
 			}
 		}
 		votes.Clear (); 
+
+
+		Debug.Log ("This is max: " + max); 
 
 
 		switch (max) {
