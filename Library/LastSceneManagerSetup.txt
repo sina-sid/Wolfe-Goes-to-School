@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< Updated upstream
-- path: Assets/RoundEnd.unity
-=======
-- path: Assets/classroomStoryScene.unity
->>>>>>> Stashed changes
+- path: Assets/votingQuestionScene.unity
   isLoaded: 1
   isActive: 1

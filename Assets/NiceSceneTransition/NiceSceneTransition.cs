@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class NiceSceneTransition : MonoBehaviour {
 
     public static NiceSceneTransition instance;
+	private string sceneName;
+	public float changeAfter = 10;
 
     public float transitionTime = 1.0f;
 
@@ -30,6 +32,10 @@ public class NiceSceneTransition : MonoBehaviour {
         }
     }
 
+	void Start() {
+		
+	}
+
     void OnEnable()
     {
         if (fadeIn)
@@ -40,7 +46,7 @@ public class NiceSceneTransition : MonoBehaviour {
 
     public void LoadScene(string level)
     {
-        StartCoroutine(EndScene(level));
+        StartCoroutine(EndScene());
     }
 
     public IEnumerator StartScene()
@@ -56,7 +62,7 @@ public class NiceSceneTransition : MonoBehaviour {
         fadeImg.gameObject.SetActive(false);
     }
 
-    public IEnumerator EndScene(string nextScene)
+    public IEnumerator EndScene()
     {
         fadeImg.gameObject.SetActive(true);
         time = 0.0f;
@@ -67,7 +73,41 @@ public class NiceSceneTransition : MonoBehaviour {
             time += Time.deltaTime * (1.0f/transitionTime);
             yield return null;
         }
-        SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+		if (sceneName == "classroomStoryScene") {
+			SceneManager.LoadScene ("votingQuestionScene");
+		} else if (sceneName == "round1Start") {
+			SceneManager.LoadScene ("round1StartPart2");
+		} else if (sceneName == "round1StartPart2") {
+			SceneManager.LoadScene ("classroomStoryScene");
+		} else if (sceneName == "votingQuestionScene") {
+			SceneManager.LoadScene ("questionAnswerScene");
+		} else if (sceneName == "votingStudentScene") {
+			SceneManager.LoadScene ("studentVoteReveal");
+		}
         StartCoroutine(StartScene());
     }
+
+	void Update () {
+		Scene scene = SceneManager.GetActiveScene ();
+		sceneName = scene.name;
+		int curTime = (int)(changeAfter - Time.timeSinceLevelLoad);
+		if (sceneName == "classroomStoryScene" && StoryTextUITextTypewriter.storyIntroPlayed) {
+			StoryTextUITextTypewriter.storyIntroPlayed = false;
+			StartCoroutine (EndScene ());
+			//			StartCoroutine ("changeScene");
+		} else if (sceneName == "round1Start" && StoryTextUITextTypewriter.storyIntroPlayed) {
+			StoryTextUITextTypewriter.storyIntroPlayed = false;
+			StartCoroutine (EndScene ());
+			//			StartCoroutine ("changeScene");
+		} else if (sceneName == "round1StartPart2" && StoryTextUITextTypewriter.storyIntroPlayed) {
+			StoryTextUITextTypewriter.storyIntroPlayed = false;
+			StartCoroutine (EndScene ());
+			//			StartCoroutine ("changeScene");
+		} else if (sceneName == "votingQuestionScene" || sceneName == "votingStudentScene") {
+			if (curTime <= 0) {
+				StartCoroutine (EndScene ());
+			}
+		}
+	}
+
 }

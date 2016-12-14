@@ -16,28 +16,31 @@ public class StoryTransitionScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (sceneName == "classroomStoryScene" && StoryTextUITextTypewriter.storyIntroPlayed) {
-			StoryTextUITextTypewriter.storyIntroPlayed = false;
-			StartCoroutine ("changeScene");
-		} else if (sceneName == "round1Start" && StoryTextUITextTypewriter.storyIntroPlayed) {
-			StoryTextUITextTypewriter.storyIntroPlayed = false;
-			StartCoroutine ("changeScene");
-		} else if (sceneName == "round1StartPart2" && StoryTextUITextTypewriter.storyIntroPlayed) {
-			StoryTextUITextTypewriter.storyIntroPlayed = false;
-			StartCoroutine ("changeScene");
-		}
-	}
+//	void Update () {
+//		if (sceneName == "classroomStoryScene" && StoryTextUITextTypewriter.storyIntroPlayed) {
+//			StoryTextUITextTypewriter.storyIntroPlayed = false;
+//			StartCoroutine(NiceSceneTransition.EndScene ());
+////			StartCoroutine ("changeScene");
+//		} else if (sceneName == "round1Start" && StoryTextUITextTypewriter.storyIntroPlayed) {
+//			StoryTextUITextTypewriter.storyIntroPlayed = false;
+//			StartCoroutine(NiceSceneTransition.EndScene ());
+////			StartCoroutine ("changeScene");
+//		} else if (sceneName == "round1StartPart2" && StoryTextUITextTypewriter.storyIntroPlayed) {
+//			StoryTextUITextTypewriter.storyIntroPlayed = false;
+//			StartCoroutine(NiceSceneTransition.EndScene ());
+////			StartCoroutine ("changeScene");
+//		}
+//	}
 		
-	IEnumerator changeScene()
-	{
-		yield return new WaitForSeconds (waitTime);
-		if (sceneName == "classroomStoryScene") {
-			SceneManager.LoadScene ("votingQuestionScene");
-		} else if (sceneName == "round1Start") {
-			SceneManager.LoadScene ("round1StartPart2");
-		} else if (sceneName == "round1StartPart2") {
-			SceneManager.LoadScene ("classroomStoryScene");
-		}
-	}
+//	IEnumerator changeScene()
+//	{
+//		yield return new WaitForSeconds (waitTime);
+//		if (sceneName == "classroomStoryScene") {
+//			SceneManager.LoadScene ("votingQuestionScene");
+//		} else if (sceneName == "round1Start") {
+//			SceneManager.LoadScene ("round1StartPart2");
+//		} else if (sceneName == "round1StartPart2") {
+//			SceneManager.LoadScene ("classroomStoryScene");
+//		}
+//	}
 }
