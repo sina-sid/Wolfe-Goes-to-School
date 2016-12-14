@@ -111,7 +111,7 @@ public class TwitchScript : MonoBehaviour {
 
 
 
-	public int votesWinner() {
+	public string votesWinner() {
 		Hashtable choiceHash = new Hashtable ();  
 		int max = -1; 
 		foreach (string key in votes.Keys) {
@@ -132,7 +132,27 @@ public class TwitchScript : MonoBehaviour {
 			}
 		}
 		votes.Clear (); 
-		return max; 
+
+
+		switch (max) {
+		case 0: 
+			return "Greg"; 
+			break; 
+		case 1: 
+			return "Bruno"; 
+			break; 
+		case 2: 
+			return "Alix"; 
+			break; 
+		case 3: 
+			return "Olivia"; 
+			break; 
+		case 4: 
+			return "Duke"; 
+			break; 
+		}
+
+		return ""; 
 	}
 
 
@@ -149,11 +169,6 @@ public class TwitchScript : MonoBehaviour {
 		} else {
 			votes.Add (username, choice); 
 		}
-
-
-
-
-
 
 
 		Debug.Log (username + " voted " + choice); 

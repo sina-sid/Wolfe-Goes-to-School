@@ -88,17 +88,17 @@ public class NiceSceneTransition : MonoBehaviour {
 			SceneManager.LoadScene ("studentVoteReveal");
 		} else if (sceneName == "studentVoteReveal") {
 			SceneManager.LoadScene ("RoundEnd");
-		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() -1 == 0) {
+		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 0) {
 			//if student selected is wolf
 				//play good ending
 			//else playround2start
 			//increment roundNumber
-		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() -1 == 1) {
+		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 1) {
 			//if student selected is wolf
 			//play good ending
 			//else play round3start
 			//increment roundNumber
-		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() -1 == 2) {
+		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 2) {
 			//if student selected is wolf
 			//play good ending
 			//else play bad ending
