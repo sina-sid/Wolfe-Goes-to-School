@@ -21,6 +21,16 @@ public class TwitchScript : MonoBehaviour {
 
 
 
+	public GameObject q1; 
+	public GameObject q2; 
+	public GameObject q3; 
+
+
+
+
+
+
+
 
 
 	// Use this for initialization
@@ -31,6 +41,11 @@ public class TwitchScript : MonoBehaviour {
 		row3 = GameObject.Find("alix_block");
 		row4 = GameObject.Find("olivia_block");
 		row5 = GameObject.Find("duke_block");
+
+
+		q1 = GameObject.Find ("q1_block"); 
+		q2 = GameObject.Find ("q2_block"); 
+		q3 = GameObject.Find ("q3_block"); 
 	
 
 		IRC = this.GetComponent<TwitchIRC>();
@@ -90,7 +105,7 @@ public class TwitchScript : MonoBehaviour {
 				max = val; 
 			}
 		}
-
+		questionChoice.Clear (); 
 		return max; 
 	}
 
@@ -116,6 +131,7 @@ public class TwitchScript : MonoBehaviour {
 				max = val; 
 			}
 		}
+		votes.Clear (); 
 		return max; 
 	}
 
@@ -147,25 +163,35 @@ public class TwitchScript : MonoBehaviour {
 		{
 		case 0:
 			scale = ((float)getVoteOf (0)) / ((float)getVotesTotal ());
-			row1.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			if (row1 != null) {
+				row1.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			}
+
 			break;
 		case 1:
 			scale = ((float)getVoteOf (1)) / ((float)getVotesTotal ());
-			row2.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			if (row2 != null) {
+				row2.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			}
 			break;
 		case 2:
 			scale = ((float)getVoteOf (2)) / ((float)getVotesTotal ());
-			row3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			if (row3 != null) {
+				row3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			}
 			break;
 		case 3:
 			scale = ((float)getVoteOf (3)) / ((float)getVotesTotal ());
-			row4.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			if (row4 != null) {
+				row4.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			}
 			break;
 		case 4:
-			scale = ((float)getVoteOf(4))/((float)getVotesTotal());
-			row5.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			scale = ((float)getVoteOf (4)) / ((float)getVotesTotal ());
+			if (row5 != null) {
+				row5.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			}
 			break;
-		
 		}
 	}
 
@@ -176,6 +202,36 @@ public class TwitchScript : MonoBehaviour {
 		} else {
 			questionChoice.Add (username, choice); 
 		}
+
+
+
+		Debug.Log (username + " voted " + choice); 
+
+		float scale = 0.0f; 
+
+		switch (choice)
+		{
+		case 1:
+			scale = ((float)getQuestionVoteOf (0)) / ((float)getQuestionCountTotal ());
+				q1.transform.localScale = new Vector3 (scale, 1.0f, 1.0f);
+			break;
+		case 2:
+			scale = ((float)getQuestionVoteOf (1)) / ((float)getQuestionCountTotal ());
+			if (q2 != null) {
+				q2.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			}
+			break;
+		case 3:
+			scale = ((float)getQuestionVoteOf (2)) / ((float)getQuestionCountTotal ());
+			if (q3 != null) {
+				q3.transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+			}
+			break;
+		}
+
+
+
+
 	}
 
 
@@ -193,6 +249,24 @@ public class TwitchScript : MonoBehaviour {
 
 	public int getVotesTotal() {
 		return votes.Keys.Count; 
+	}
+
+
+
+	public int getQuestionVoteOf(int choice) {
+		int count = 0; 
+		foreach (string key in questionChoice.Keys) {
+			int val = (int)questionChoice[key];
+			if (val == choice) {
+				count++; 
+			}
+		}
+		return count; 
+	}
+
+
+	public int getQuestionCountTotal() {
+		return questionChoice.Keys.Count; 
 	}
 
 
