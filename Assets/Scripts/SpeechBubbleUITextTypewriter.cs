@@ -26,13 +26,17 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 
 		Debug.Log ("Question num: " + questionNumber); 
 
+		if (logicTree == null) {
+			Debug.Log ("Logic tree is null once again. fml.");
+		}
+
 
 
 
 	
 
 
-		if (questionNumber == 1) {
+		if (questionNumber == 0) {
 			if (!logicTree.rounds [logicTree.getRoundNumber ()].Q1.getCharacter ("Greg").isResponsePlayed) {
 				response = logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Greg").getRandomResponse ();
 				logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Greg").isResponsePlayed = true; 
@@ -49,7 +53,7 @@ public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 				response = logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Duke").getRandomResponse ();
 				logicTree.rounds [logicTree.getRoundNumber () ].Q1.getCharacter ("Duke").isResponsePlayed = true; 
 			}
-		} else if (questionNumber == 2) {
+		} else if (questionNumber == 1) {
 			if (!logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Greg").isResponsePlayed) {
 				response = logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Greg").getRandomResponse ();
 				logicTree.rounds [logicTree.getRoundNumber () ].Q2.getCharacter ("Greg").isResponsePlayed = true; 

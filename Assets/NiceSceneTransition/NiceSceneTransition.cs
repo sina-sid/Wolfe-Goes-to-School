@@ -79,7 +79,7 @@ public class NiceSceneTransition : MonoBehaviour {
 
 
 //		Debug.Log ("THIS RUNS " + logicTree.getRoundNumber ()); 
-//		Debug.Log("HELLO ROUND " + sceneName); 
+		Debug.Log("HELLO ROUND " + sceneName); 
 //
 //
 //		if (logicTree.isWolfKilled) {
@@ -100,50 +100,27 @@ public class NiceSceneTransition : MonoBehaviour {
 			SceneManager.LoadScene ("questionAnswerScene");
 		} else if (sceneName == "votingStudentScene") {
 			SceneManager.LoadScene ("studentVoteReveal");
-		} 
-		else if (sceneName == "studentVoteReveal") {
-			Debug.Log (StoryTextUITextTypewriter.storyIntroPlayed.ToString());
+		} else if (sceneName == "studentVoteReveal") {
 			SceneManager.LoadScene ("RoundEnd");
-		} 
-		else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 0) {
-			//if student selected is wolf
-				//play good ending
-			//else playround2start
-
-			//increment roundNumber
-//			if (logicTree.isWolfKilled) {
-//				Debug.Log ("HELLO KILL"); 
-//			} else {
-//				Debug.Log ("HELLO NEXT"); 
-//				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
-//			}
-
-
-
-
-
-
-
-
+		} else if (sceneName == "round2Start") {
+			SceneManager.LoadScene ("classroomStoryScene");
 		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 1) {
-			//if student selected is wolf
-			//play good ending
-			//else play round3start
-			//increment roundNumber
 			if (logicTree.isWolfKilled) {
+				SceneManager.LoadScene ("GameWin");
 			} else {
-				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
+				SceneManager.LoadScene ("round2Start"); 
 			}
-
-
 		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 2) {
-			//if student selected is wolf
-			//play good ending
-			//else play bad ending
-
 			if (logicTree.isWolfKilled) {
+				SceneManager.LoadScene ("GameWin");
 			} else {
-				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
+				SceneManager.LoadScene ("round3Start"); 
+			}
+		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 3) {
+			if (logicTree.isWolfKilled) {
+				SceneManager.LoadScene ("GameWin");
+			} else {
+				SceneManager.LoadScene ("GameLose"); 
 			}
 		}
         StartCoroutine(StartScene());

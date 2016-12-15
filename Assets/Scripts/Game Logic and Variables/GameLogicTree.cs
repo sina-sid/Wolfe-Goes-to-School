@@ -72,7 +72,8 @@ public class Character
 		string character2 = getBlameCharacter (primaryResponse); 
 		string character3 = getBlameCharacter (primaryResponse); 
 
-		int randomNum = Random.Range(0,choices);
+		//int randomNum = Random.Range(0,choices);
+		int randomNum = 1;
 
 		switch (randomNum)
 		{

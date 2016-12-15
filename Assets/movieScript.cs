@@ -27,9 +27,9 @@ public class movieScript : MonoBehaviour {
 			if (sceneName == "Opening") {
 				SceneManager.LoadScene ("round1Start");
 			} else if (sceneName == "RoundEnd") {
-				if (logicTree.getRoundNumber () == 0) {
+				if (logicTree.getRoundNumber () == 1) {
 					SceneManager.LoadScene ("round2Start");
-				} else if (logicTree.getRoundNumber () == 1) {
+				} else if (logicTree.getRoundNumber () == 2) {
 					SceneManager.LoadScene ("round3Start");
 				} else {
 				}
