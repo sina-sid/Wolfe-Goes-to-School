@@ -112,6 +112,9 @@ public class TwitchScript : MonoBehaviour {
 
 
 	public string votesWinner() {
+
+
+
 		Hashtable choiceHash = new Hashtable ();  
 		int max = -1; 
 		foreach (string key in votes.Keys) {
@@ -184,6 +187,12 @@ public class TwitchScript : MonoBehaviour {
 
 	void updateVotes() {
 
+		row1 = GameObject.Find("greg_block");
+		row2 = GameObject.Find("bruno_block");
+		row3 = GameObject.Find("alix_block");
+		row4 = GameObject.Find("olivia_block");
+		row5 = GameObject.Find("duke_block");
+
 		float scale = 0.0f; 
 
 		scale = ((float)getVoteOf (0)) / ((float)getVotesTotal ());
@@ -218,6 +227,10 @@ public class TwitchScript : MonoBehaviour {
 
 	void updateQuestionVotes() {
 		float scale = 0.0f; 
+
+		q1 = GameObject.Find ("q0_block"); 
+		q2 = GameObject.Find ("q1_block"); 
+		q3 = GameObject.Find ("q2_block"); 
 
 		scale = ((float)getQuestionVoteOf (2)) / ((float)getQuestionCountTotal ());
 		if (q3 != null) {
