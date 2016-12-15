@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using SimpleJSON;
 
 
-//TODO: ADD STREAMER FUNCTIONALITY
+
+// Streamer struct for later functionality 
 
 public struct Streamer {
 	public bool isAlive;
@@ -23,6 +24,7 @@ public struct AudienceSelection {
 
 
 
+//Round contains 3 questions to choose between 
 
 public class Round 
 {	
@@ -31,6 +33,10 @@ public class Round
 	public Question Q3; 
 }
 	
+
+
+
+//Each Question contains the title of the question as well as a list of characters 
 
 public class Question
 {
@@ -49,31 +55,46 @@ public class Question
 
 
 
+
+//Character contains various booleans required for the project
 public class Character
 {
+	//check if this character is alive, if they are the wolf, or if the response has been played 
 	public bool isAlive;
 	public bool isWolf; 
 	public bool isResponsePlayed; 
 	public string name; 
 	public bool hasSpoken;
+
+	//various responses that can be played by the user 
 	public string neutralResponse; 
 	public string selfResponse; 
 	public string primaryResponse; 
 	public string secondaryResponse; 
 	public string tertiaryResponse; 
+
+	//pointer back to the parent to get the question
 	public Question parent; 
 
 
+	//get a random response from all of the possible choices of responses for the character
 	public string getRandomResponse() {
 		int choices = 4; 
+
+		//null checks 
 		choices = string.IsNullOrEmpty (secondaryResponse) == true ? choices -= 1 : choices; 
 		choices = string.IsNullOrEmpty (tertiaryResponse) == true ? choices -= 1 : choices; 
+
+		//get the character that could be blamed from the responses 
 		string character1 = getBlameCharacter (primaryResponse); 
 		string character2 = getBlameCharacter (primaryResponse); 
 		string character3 = getBlameCharacter (primaryResponse); 
 
+
+
+		//randomly pick a response to blame
+
 		int randomNum = Random.Range(0,choices);
-//		int randomNum = 1;
 
 		switch (randomNum)
 		{
@@ -179,9 +200,11 @@ public class GameLogicTree : MonoBehaviour {
 	public Dictionary<int, string> question3;
 
 
+	//boolean to check if the wolf has been killed 
 	public bool isWolfKilled = false; 
 
 
+	//global list of the entire script
 	public List<Round> rounds; 
 
 	// Use this for initialization
@@ -212,6 +235,7 @@ public class GameLogicTree : MonoBehaviour {
 
 
 
+	//save persistance 
 	void awake() {
 		DontDestroyOnLoad (transform.gameObject); 
 	}
@@ -220,6 +244,7 @@ public class GameLogicTree : MonoBehaviour {
 
 
 
+	//keep track of round number 
 	public int getRoundNumber() {
 		return roundNumber; 
 	}
@@ -229,6 +254,8 @@ public class GameLogicTree : MonoBehaviour {
 	}
 
 
+
+	//get the number of players who still remain alive
 	public int getNumAlive() {
 
 
@@ -246,6 +273,8 @@ public class GameLogicTree : MonoBehaviour {
 	}
 
 
+
+	//parses JSON of the dialogue and turns it into the class structure as described above 
 	void parseRounds() {
 
 
@@ -262,7 +291,8 @@ public class GameLogicTree : MonoBehaviour {
 
 
 
-
+		//create a question and get all possible characters and response...
+		//repeats for all of the options
 		Question q1 = new Question(); 
 		q1.title = N ["Question1"] ["title"].Value; 
 		JSONArray arr = N["Question1"]["characters"].AsArray;
@@ -504,6 +534,7 @@ public class GameLogicTree : MonoBehaviour {
 	}
 
 
+	//kills a character at any stage of the game 
 	public void kill(string name) {
 		foreach (Round r in rounds) {
 			for (int i = 0; i < r.Q1.Characters.Count; i++) {

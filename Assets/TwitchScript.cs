@@ -8,11 +8,13 @@ public class TwitchScript : MonoBehaviour {
 	bool connected; 
 	public string delimiter;
 
+	//hash tables to keep track of choices made by the user 
 	public Hashtable votes; 
 	public Hashtable questionChoice; 
 
 
 
+	//bars in the graph screens 
 	public GameObject row1;
 	public GameObject row2;
 	public GameObject row3;
@@ -36,6 +38,7 @@ public class TwitchScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		// iniialize all graph views 
 		row1 = GameObject.Find("greg_block");
 		row2 = GameObject.Find("bruno_block");
 		row3 = GameObject.Find("alix_block");
@@ -52,6 +55,8 @@ public class TwitchScript : MonoBehaviour {
 		votes = new Hashtable();
 		questionChoice = new Hashtable (); 
 
+
+		//start listening to twitch stuff 
 		if (IRC == null) {
 			Debug.Log ("THIS IS NULL"); 
 		} else {
@@ -63,6 +68,7 @@ public class TwitchScript : MonoBehaviour {
 	}
 
 
+	//call back listener once you're connected to twitch chat 
 	void Connected()
 	{
 		connected = true;
@@ -74,6 +80,8 @@ public class TwitchScript : MonoBehaviour {
 	
 	}
 
+
+	//gets called when someone sends a message on twitch 
 	void getMessage(string msg){
 		//Handle Message
 		//Form: “PRIVMSG #nickName: message”
@@ -82,10 +90,11 @@ public class TwitchScript : MonoBehaviour {
 	}
 
 
-	//return 
+	//can be called to see who won the question 
 	public int questionWinner() {
 		
 
+		//hashtable to keep track of the choices 
 		Hashtable choiceHash = new Hashtable ();  
 		int max = -1; 
 		foreach (string key in questionChoice.Keys) {
@@ -98,7 +107,7 @@ public class TwitchScript : MonoBehaviour {
 			}
 		}
 
-
+		//iterate through hashtable to get winner 
 		foreach (int key in choiceHash.Keys) {
 			int val = (int)choiceHash[key];
 			if (val > max) {
@@ -110,7 +119,7 @@ public class TwitchScript : MonoBehaviour {
 	}
 
 
-
+	//can be called to see who won the character vote 
 	public string votesWinner() {
 
 
@@ -136,36 +145,35 @@ public class TwitchScript : MonoBehaviour {
 		}
 		votes.Clear (); 
 
+	
 
-		Debug.Log ("This is max: " + max); 
 
+		//return name of chracter rather than index
 
 		switch (max) {
 		case 0: 
 			return "Greg"; 
-			break; 
 		case 1: 
-			return "Bruno"; 
-			break; 
+			return "Bruno";
 		case 2: 
 			return "Alix"; 
-			break; 
 		case 3: 
 			return "Olivia"; 
-			break; 
 		case 4: 
 			return "Duke"; 
-			break; 
 		}
 
 		return ""; 
 	}
 
 
+	//send chat message back to the user 
 	public void displayMessage(string str) {
 		IRC.SendMsg (str); 
 	}
-		
+
+
+	//vote for a character
 	public void Vote(string username, int choice)
 	{
 
@@ -177,9 +185,7 @@ public class TwitchScript : MonoBehaviour {
 		}
 
 
-		Debug.Log (username + " voted " + choice); 
-		float scale = 0.0f; 
-
+		//reload graph view when a vote has been cast 
 		updateVotes (); 
 	}
 
@@ -187,6 +193,7 @@ public class TwitchScript : MonoBehaviour {
 
 	void updateVotes() {
 
+		//change size of graph rows 
 		row1 = GameObject.Find("greg_block");
 		row2 = GameObject.Find("bruno_block");
 		row3 = GameObject.Find("alix_block");
@@ -228,6 +235,7 @@ public class TwitchScript : MonoBehaviour {
 	void updateQuestionVotes() {
 		float scale = 0.0f; 
 
+		//change size of graph rows 
 		q1 = GameObject.Find ("q0_block"); 
 		q2 = GameObject.Find ("q1_block"); 
 		q3 = GameObject.Find ("q2_block"); 
@@ -252,6 +260,7 @@ public class TwitchScript : MonoBehaviour {
 	}
 
 
+	//gets called when a vote for a question has been cast 
 	public void Question(string username, int choice) {
 		if (questionChoice.ContainsKey (username)) {
 			questionChoice [username] = choice; 
@@ -268,6 +277,7 @@ public class TwitchScript : MonoBehaviour {
 
 
 
+	//get num of votes for X choice 
 	public int getVoteOf(int choice) {
 		int count = 0; 
 		foreach (string key in votes.Keys) {
@@ -279,12 +289,13 @@ public class TwitchScript : MonoBehaviour {
 		return count; 
 	}
 
+	//get total votes cast
 	public int getVotesTotal() {
 		return votes.Keys.Count; 
 	}
 
 
-
+	//get num of votes for X choice 
 	public int getQuestionVoteOf(int choice) {
 		int count = 0; 
 		foreach (string key in questionChoice.Keys) {
@@ -296,12 +307,14 @@ public class TwitchScript : MonoBehaviour {
 		return count; 
 	}
 
-
+	//get total votes cast
 	public int getQuestionCountTotal() {
 		return questionChoice.Keys.Count; 
 	}
 
 
+
+	//listener that gets called when vote has been cast and parses the message from the twitch screen 
 	public void convertMsg(string str) {
 
 
@@ -315,6 +328,7 @@ public class TwitchScript : MonoBehaviour {
 
 
 
+		//parse and get the command and parameter cast 
 		str = str.Substring(msgIndex + IRC.nickName.Length + 11);
 		//Allow non delimited commands using the entire string (ie 'A' for A-button instead of 'button: A')
 		string cmd = str;
@@ -331,6 +345,8 @@ public class TwitchScript : MonoBehaviour {
 		}
 
 		int x = -1; 
+
+		//cast votes for appropropriate command 
 		if (cmd.Contains ("Question") && !(str.Equals("Question") || str.Equals("Question:") )) {
 
 		
