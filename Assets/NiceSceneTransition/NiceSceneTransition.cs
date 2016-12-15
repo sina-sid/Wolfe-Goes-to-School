@@ -10,7 +10,6 @@ public class NiceSceneTransition : MonoBehaviour {
 	public float changeAfter = 10;
 	public GameLogicTree logicTree;
 
-
     public float transitionTime = 1.0f;
 
     public bool fadeIn;
@@ -89,7 +88,6 @@ public class NiceSceneTransition : MonoBehaviour {
 //		}
 
 
-
 		if (sceneName == "classroomStoryScene") {
 			SceneManager.LoadScene ("votingQuestionScene");
 		} else if (sceneName == "round1Start") {
@@ -99,29 +97,12 @@ public class NiceSceneTransition : MonoBehaviour {
 		} else if (sceneName == "votingQuestionScene") {
 			SceneManager.LoadScene ("questionAnswerScene");
 		} else if (sceneName == "votingStudentScene") {
+			// WARNING! AREA BELOW CONTAINS BUGS
 			SceneManager.LoadScene ("studentVoteReveal");
 		} else if (sceneName == "studentVoteReveal") {
 			SceneManager.LoadScene ("RoundEnd");
 		} else if (sceneName == "round2Start") {
 			SceneManager.LoadScene ("classroomStoryScene");
-		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 1) {
-			if (logicTree.isWolfKilled) {
-				SceneManager.LoadScene ("GameWin");
-			} else {
-				SceneManager.LoadScene ("round2Start"); 
-			}
-		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 2) {
-			if (logicTree.isWolfKilled) {
-				SceneManager.LoadScene ("GameWin");
-			} else {
-				SceneManager.LoadScene ("round3Start"); 
-			}
-		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 3) {
-			if (logicTree.isWolfKilled) {
-				SceneManager.LoadScene ("GameWin");
-			} else {
-				SceneManager.LoadScene ("GameLose"); 
-			}
 		}
         StartCoroutine(StartScene());
     }
@@ -142,11 +123,10 @@ public class NiceSceneTransition : MonoBehaviour {
 			StoryTextUITextTypewriter.storyIntroPlayed = false;
 			StartCoroutine (EndScene ());
 			//			StartCoroutine ("changeScene");
-		} else if (sceneName == "votingQuestionScene" || sceneName == "votingStudentScene") {
+		} else if (sceneName == "votingQuestionScene") {
 			if (curTime <= 0) {
 				StartCoroutine (EndScene ());
-			} 
-
+			}
 		} else if (sceneName == "studentVoteReveal") {
 			StoryTextUITextTypewriter.storyIntroPlayed = false;
 			StartCoroutine (EndScene ());

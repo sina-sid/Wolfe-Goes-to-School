@@ -72,8 +72,8 @@ public class Character
 		string character2 = getBlameCharacter (primaryResponse); 
 		string character3 = getBlameCharacter (primaryResponse); 
 
-		//int randomNum = Random.Range(0,choices);
-		int randomNum = 1;
+		int randomNum = Random.Range(0,choices);
+//		int randomNum = 1;
 
 		switch (randomNum)
 		{
@@ -268,8 +268,8 @@ public class GameLogicTree : MonoBehaviour {
 		JSONArray arr = N["Question1"]["characters"].AsArray;
 		q1.Characters = new List<Character> (); 
 
-//		int randNum = Random.Range (0, arr.Count); 
-		int randNum = 1; 
+		int randNum = Random.Range (0, arr.Count); 
+		// int randNum = 1; 
 
 		for (int i = 0; i < arr.Count; i++) {
 			Character character = new Character ();  
