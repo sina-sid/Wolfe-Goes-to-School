@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+// Handles the timer in the voting screen
+
 public class TimerScript : MonoBehaviour {
 
 	Text timer;
-	public float maxTime = 60;
+	public float maxTime = 30; //for the purpose of the demo, we're giving players 30 seconds
+								// but after playtesting, we figured 2 minutes was best for fostering good discussions
 
 	// Use this for initialization
 	void Start () {

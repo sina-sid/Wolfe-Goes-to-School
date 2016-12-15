@@ -84,16 +84,12 @@
      <Compile Include="Assets\Scripts\Game Logic and Variables\GameLogicTree.cs" />
      <Compile Include="Assets\Scripts\Game Logic and Variables\Loader.cs" />
      <Compile Include="Assets\Scripts\Game Logic and Variables\dialogueScript.cs" />
-     <Compile Include="Assets\Scripts\ScrollText.cs" />
      <Compile Include="Assets\Scripts\SimpleJSON.cs" />
      <Compile Include="Assets\Scripts\SpeechBubbleUITextTypewriter.cs" />
      <Compile Include="Assets\Scripts\StoryTextUITextTypewriter.cs" />
-     <Compile Include="Assets\Scripts\StoryTransitionScript.cs" />
      <Compile Include="Assets\Scripts\TimerScript.cs" />
      <Compile Include="Assets\Scripts\UITextTypewriter.cs" />
-     <Compile Include="Assets\Scripts\VotingTransitionScript.cs" />
      <Compile Include="Assets\Scripts\changeRound.cs" />
-     <Compile Include="Assets\Scripts\testTransitionScript.cs" />
      <Compile Include="Assets\TwitchScript.cs" />
      <Compile Include="Assets\movieScript.cs" />
  <Reference Include="UnityEngine.UI">

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Increments round number (only called in RoundEnd scene)
+
 public class DisplaySpeechBubble : MonoBehaviour {
 
 	private SpriteRenderer bubble;

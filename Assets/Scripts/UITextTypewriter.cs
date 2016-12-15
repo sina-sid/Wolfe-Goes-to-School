@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 // attach to UI Text component (with the full text already there)
+// Thank you to Anil for giving us this script
 
 public class UITextTypewriter : MonoBehaviour
 {

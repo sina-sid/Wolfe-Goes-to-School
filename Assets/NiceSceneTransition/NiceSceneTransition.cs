@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+//Handles the fade-to-black transition for all scenes except the cutscenes
+
 public class NiceSceneTransition : MonoBehaviour {
 
     public static NiceSceneTransition instance;

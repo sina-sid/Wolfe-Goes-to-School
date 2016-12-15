@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// Plays the video for both cutscenes and handles scene transitions for those scenes
+
 public class movieScript : MonoBehaviour {
 
 	public float changeAfter = 16;

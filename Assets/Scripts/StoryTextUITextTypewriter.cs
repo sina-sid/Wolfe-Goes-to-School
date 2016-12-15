@@ -3,11 +3,9 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-// attach to UI Text component (with the full text already there)
-
 public class StoryTextUITextTypewriter : MonoBehaviour
 {
-
+	// Displays the story.instruction text for some of the scenes
 	Text txt;
 	public string story;
 	public static bool storyIntroPlayed;

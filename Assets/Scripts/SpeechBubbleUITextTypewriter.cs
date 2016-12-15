@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SpeechBubbleUITextTypewriter : MonoBehaviour {
 
+	// This class displays the student answers for all alive question
 	Text txt;
 	public string currentResponse;
 	private static bool startSpeech;
