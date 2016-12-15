@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StoryTextUITextTypewriter.cs">
     <Files>
-      <File FileName="Assets\NiceSceneTransition\NiceSceneTransition.cs" Line="154" Column="33" />
-      <File FileName="Assets\Scripts\StoryTextUITextTypewriter.cs" Line="54" Column="47" />
+      <File FileName="Assets\NiceSceneTransition\NiceSceneTransition.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryTextUITextTypewriter.cs" Line="11" Column="11" />
+      <File FileName="Assets\movieScript.cs" Line="30" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

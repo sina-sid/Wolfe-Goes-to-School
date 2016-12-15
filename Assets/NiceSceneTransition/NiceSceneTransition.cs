@@ -78,15 +78,15 @@ public class NiceSceneTransition : MonoBehaviour {
         }
 
 
-		Debug.Log ("THIS RUNS " + logicTree.getRoundNumber ()); 
-		Debug.Log("HELLO ROUND " + sceneName); 
-
-
-		if (logicTree.isWolfKilled) {
-			Debug.Log ("HELLO KILL"); 
-		} else {
-			Debug.Log ("HELLO NEXT"); 
-		}
+//		Debug.Log ("THIS RUNS " + logicTree.getRoundNumber ()); 
+//		Debug.Log("HELLO ROUND " + sceneName); 
+//
+//
+//		if (logicTree.isWolfKilled) {
+//			Debug.Log ("HELLO KILL"); 
+//		} else {
+//			Debug.Log ("HELLO NEXT"); 
+//		}
 
 
 
@@ -100,20 +100,23 @@ public class NiceSceneTransition : MonoBehaviour {
 			SceneManager.LoadScene ("questionAnswerScene");
 		} else if (sceneName == "votingStudentScene") {
 			SceneManager.LoadScene ("studentVoteReveal");
-		} else if (sceneName == "studentVoteReveal") {
+		} 
+		else if (sceneName == "studentVoteReveal") {
+			Debug.Log (StoryTextUITextTypewriter.storyIntroPlayed.ToString());
 			SceneManager.LoadScene ("RoundEnd");
-		} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 0) {
+		} 
+		else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 0) {
 			//if student selected is wolf
 				//play good ending
 			//else playround2start
 
 			//increment roundNumber
-			if (logicTree.isWolfKilled) {
-				Debug.Log ("HELLO KILL"); 
-			} else {
-				Debug.Log ("HELLO NEXT"); 
-				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
-			}
+//			if (logicTree.isWolfKilled) {
+//				Debug.Log ("HELLO KILL"); 
+//			} else {
+//				Debug.Log ("HELLO NEXT"); 
+//				logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
+//			}
 
 
 
@@ -166,7 +169,8 @@ public class NiceSceneTransition : MonoBehaviour {
 			if (curTime <= 0) {
 				StartCoroutine (EndScene ());
 			} 
-		} else if (sceneName == "studentVoteReveal" && StoryTextUITextTypewriter.storyIntroPlayed) {
+
+		} else if (sceneName == "studentVoteReveal") {
 			StoryTextUITextTypewriter.storyIntroPlayed = false;
 			StartCoroutine (EndScene ());
 		}
