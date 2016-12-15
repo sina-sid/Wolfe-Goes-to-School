@@ -21,24 +21,25 @@ public class movieScript : MonoBehaviour {
 	void Update () {
 		Scene scene = SceneManager.GetActiveScene();
 		sceneName = scene.name;
-		Debug.Log (Time.timeSinceLevelLoad.ToString ());
+		int curTime = (int)(changeAfter - Time.timeSinceLevelLoad);
+		//Debug.Log (Time.timeSinceLevelLoad.ToString ());
 		//		Debug.Log (curTime.ToString ());
-		if (movie.isPlaying == false) {
+		if (curTime <= 0) {
 			if (sceneName == "Opening") {
 				SceneManager.LoadScene ("round1Start");
-			} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 1) {
+			} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 1 && !movie.isPlaying) {
 				if (logicTree.isWolfKilled) {
 					SceneManager.LoadScene ("GameWin");
 				} else {
 					SceneManager.LoadScene ("round2Start"); 
 				}
-			} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 2) {
+			} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 2 && !movie.isPlaying) {
 				if (logicTree.isWolfKilled) {
 					SceneManager.LoadScene ("GameWin");
 				} else {
 					SceneManager.LoadScene ("round3Start"); 
 				}
-			} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 3) {
+			} else if (sceneName == "RoundEnd" && logicTree.getRoundNumber() == 3 && !movie.isPlaying) {
 				if (logicTree.isWolfKilled) {
 					SceneManager.LoadScene ("GameWin");
 				} else {

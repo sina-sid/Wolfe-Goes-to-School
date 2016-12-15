@@ -7,7 +7,7 @@ public class NiceSceneTransition : MonoBehaviour {
 
     public static NiceSceneTransition instance;
 	private string sceneName;
-	public float changeAfter = 10;
+	public float changeAfter = 30;
 	public GameLogicTree logicTree;
 
     public float transitionTime = 1.0f;
@@ -123,7 +123,7 @@ public class NiceSceneTransition : MonoBehaviour {
 			StoryTextUITextTypewriter.storyIntroPlayed = false;
 			StartCoroutine (EndScene ());
 			//			StartCoroutine ("changeScene");
-		} else if (sceneName == "votingQuestionScene") {
+		} else if (sceneName == "votingQuestionScene" || sceneName == "votingStudentScene") {
 			if (curTime <= 0) {
 				StartCoroutine (EndScene ());
 			}

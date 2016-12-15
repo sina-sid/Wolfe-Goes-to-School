@@ -50,7 +50,12 @@ public class StoryTextUITextTypewriter : MonoBehaviour
 			logicTree.kill (voteWinner); 
 			story = "You chose " + voteWinner + ". Your other students drag them to the tetherball court to teach them a lesson.";
 			StartCoroutine("PlayText");
-		} 
+		} else if (sceneName == "votingQuestionScene") {
+			story = "Time to ask your students a question. Type in \"Question: \" to vote for the question you want to ask. For example, type \"Question: 0\" to vote for the first question.\n";
+			story = story + "Question 0: " + logicTree.rounds [logicTree.getRoundNumber ()].Q1.title;
+			story = story + "\nQuestion 1: " + logicTree.rounds [logicTree.getRoundNumber ()].Q2.title;
+			story = story + "\nQuestion 2: " + logicTree.rounds [logicTree.getRoundNumber ()].Q3.title;
+		}
 		else {
 			story = txt.text;
 		}
