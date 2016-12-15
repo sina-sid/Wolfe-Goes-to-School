@@ -1,5 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StoryTextUITextTypewriter.cs">
     <Files>
       <File FileName="Assets\NiceSceneTransition\NiceSceneTransition.cs" Line="1" Column="1" />
@@ -7,6 +8,9 @@
       <File FileName="Assets\movieScript.cs" Line="30" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+=======
+  <MonoDevelop.Ide.Workbench />
+>>>>>>> 00469794f811e2df96eb911d20fcb5d4ebb04867
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

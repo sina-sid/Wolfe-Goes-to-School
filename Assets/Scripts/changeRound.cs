@@ -7,9 +7,7 @@ public class changeRound : MonoBehaviour {
 	void Start () {
 		
 		GameLogicTree logicTree = FindObjectOfType(typeof(GameLogicTree)) as GameLogicTree;
-
 		logicTree.setRoundNumber (logicTree.getRoundNumber() + 1); 
-	
 
 	}
 	
